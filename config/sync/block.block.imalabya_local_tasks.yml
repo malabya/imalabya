@@ -1,0 +1,22 @@
+uuid: f013e530-607c-4b05-b710-32a32d800473
+langcode: en
+status: true
+dependencies:
+  theme:
+    - imalabya
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: imalabya_local_tasks
+theme: imalabya
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

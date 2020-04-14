@@ -1,0 +1,18 @@
+<header id="header">
+	{{ page.branding }}
+	{{ page.navigation }}
+</header>
+{% block content %}
+	<main>
+		<div id="banner">
+			{{ page.header }}
+		</div>
+		{{ page.help }}
+		<div id="content">
+			{{ page.content }}
+		</div>
+	</main>
+{% endblock %}
+<footer id="footer">
+	{{ page.footer }}
+</footer>

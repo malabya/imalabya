@@ -1,0 +1,20 @@
+uuid: 3252e4b6-f85a-4f8a-8d8c-a3085a215cb3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - imalabya
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: imalabya_local_actions
+theme: imalabya
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

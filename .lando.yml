@@ -1,0 +1,14 @@
+name: imalabya
+recipe: drupal8
+config:
+  webroot: web
+  php: "7.4"
+  drush: "*"
+  xdebug: false
+services:
+  database:
+    type: mariadb:10.4
+    creds:
+      user: database
+      password: database
+      database: database

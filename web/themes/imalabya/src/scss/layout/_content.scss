@@ -1,0 +1,27 @@
+#banner
+{
+    margin-bottom: $space-xxl;
+    padding: $space-header-top-sm 0 $space-header-bottom;
+
+    background: $color-header-bg;
+
+    @include grid();
+    @media screen and (min-width: $screen-sm)
+    {
+        padding: $space-header-top 0 $space-header-bottom;
+    }
+    > *
+    {
+        margin: 0;
+
+        @include container();
+    }
+}
+#content
+{
+    @include grid();
+    > *
+    {
+        @include container();
+    }
+}

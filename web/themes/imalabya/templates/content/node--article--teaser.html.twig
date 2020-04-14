@@ -1,0 +1,16 @@
+{% extends "node.html.twig" %}
+{% set createdDateTime = node.getCreatedTime|format_date('html_datetime') %}
+{% set createdDate = node.getCreatedTime|format_date('default') %}
+{% block content %}
+	{{ attach_library("imalabya/article-card") }}
+  <header>
+    <span class="cat">{{ content.field_category }}</span>
+  </header>
+	<h3{{title_attributes}}>
+		<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+	</h2>
+	<footer>
+		<label for="time">{{ "Posted on"|t }}</label>
+		<time datetime={{ createdDateTime }}>{{ createdDate }}</time>
+	</footer>
+{% endblock %}

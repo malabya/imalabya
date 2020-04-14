@@ -1,0 +1,21 @@
+.messages
+{
+    @include box();
+    > div
+    {
+        margin-bottom: $space-xl;
+        padding: $space;
+    }
+    .status
+    {
+        background: $success;
+    }
+    .warning
+    {
+        background: $warning;
+    }
+    .error
+    {
+        background: $danger;
+    }
+}

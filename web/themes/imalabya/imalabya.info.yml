@@ -1,0 +1,16 @@
+name: iMalabya
+type: theme
+description: 'My Awesome theme'
+package: Custom
+core: 8.x
+core_version_requirement: ^8|^9
+libraries:
+  - imalabya/global-styling
+base theme: stable
+regions:
+  branding: Branding
+  navigation: Navigation
+  header: Header
+  help: Help
+  content: Content
+  footer: Footer

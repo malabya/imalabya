@@ -1,0 +1,58 @@
+#footer
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: $space-xxl;
+    margin-bottom: $space-xl;
+    padding-top: $space-l;
+
+    border-top: .0625rem dotted $color-grey;
+
+    @include box();
+    @media screen and (min-width: $screen-sm)
+    {
+        justify-content: space-between;
+    }
+    p
+    {
+        font-size: $font-size--s;
+        font-weight: $font-weight--semi-bold;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $color-grey;
+        @media screen and (min-width: $screen-sm)
+        {
+            font-size: $font-size;
+        }
+        svg
+        {
+            margin: 0 .35rem;
+        }
+    }
+    #social
+    {
+        text-align: center;
+        a
+        {
+            margin: 0 .25rem;
+            > svg path
+            {
+                transition: all $transition-time ease-in-out;
+            }
+            &:hover,
+            &:focus
+            {
+                > svg path
+                {
+                    fill: $color-primary;
+                }
+            }
+        }
+    }
+}

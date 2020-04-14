@@ -1,0 +1,22 @@
+uuid: a22d98b8-f45d-4289-9369-796b211dc1bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imalabya
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: imalabya_messages
+theme: imalabya
+region: help
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 47a557d9-4455-4784-89bb-0dc971f4eb72
+langcode: en
+status: true
+dependencies:
+  theme:
+    - imalabya
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: imalabya_page_title
+theme: imalabya
+region: header
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

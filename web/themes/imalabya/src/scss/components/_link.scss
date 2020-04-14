@@ -1,0 +1,14 @@
+a
+{
+    transition: background $transition-time linear, color $transition-time linear;
+    vertical-align: baseline;
+    text-decoration: none;
+
+    color: $color-link;
+    background: transparent;
+    &:hover,
+    &:focus
+    {
+        background: $color-link--hover;
+    }
+}

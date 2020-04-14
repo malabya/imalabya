@@ -1,0 +1,21 @@
+global-styling:
+  version: 1
+  css:
+    theme:
+      dist/css/main.css: {}
+admin:
+  css:
+    component:
+      dist/css/components/local_task_tabs.css: {}
+index:
+  css:
+    theme:
+      dist/css/pages/index.css: {}
+node:
+  css:
+    theme:
+      dist/css/pages/node.css: {}
+article-card:
+  css:
+    theme:
+      dist/css/components/article_card.css: {}

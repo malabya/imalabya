@@ -1,0 +1,174 @@
+@import '../settings/colors';
+@import '../settings/variables';
+@import '../base/mixin';
+article
+{
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+    @media screen and (min-width: $screen-lg)
+    {
+        grid-template-columns: 1fr 10rem 60rem 10rem 1fr;
+    }
+    > *
+    {
+        padding-right: $space-l;
+        padding-left: $space-l;
+
+        grid-column: 1 / -1;
+        @media screen and (min-width: $screen-sm)
+        {
+            grid-column: 3 / -3;
+        }
+    }
+    ul
+    {
+        margin-top: $space-text-top;
+        margin-bottom: $space-text-bottom;
+        > li
+        {
+            font-size: $font-size--text;
+
+            position: relative;
+
+            margin-bottom: $space;
+            padding-left: $space-l;
+            &:before
+            {
+                position: absolute;
+                top: .75rem;
+                left: 0;
+
+                width: .35rem;
+                height: .35rem;
+
+                content: '';
+
+                border-radius: 50%;
+                background: $color-primary;
+            }
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+    ol
+    {
+        margin-bottom: $space-text-bottom;
+
+        list-style: decimal;
+        > li
+        {
+            margin-bottom: $space;
+            margin-left: $space;
+            padding-left: $space-s;
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+    h3
+    {
+        margin-top: $space-l;
+        margin-bottom: 0;
+    }
+    blockquote
+    {
+        margin-top: $space-text-top;
+        margin-bottom: $space-text-bottom;
+        p
+        {
+            font-size: $font-size--blockquote;
+            font-weight: $font-weight--light;
+
+            padding: $space-m;
+
+            color: $color-primary;
+            border-left: .25rem solid $color-primary;
+        }
+    }
+    pre
+    {
+        margin-top: $space-text-top;
+        margin-bottom: $space-text-bottom;
+    }
+    code
+    {
+        font-family: monospace;
+
+        overflow: auto;
+
+        padding: $space-m;
+    }
+    footer
+    {
+        *
+        {
+            display: inline-block;
+            @media screen and (min-width: $screen-lg)
+            {
+                display: inherit;
+            }
+        }
+        @media screen and (min-width: $screen-lg)
+        {
+            grid-column: 2 / 2;
+            grid-row: 1 / 5;
+        }
+        label
+        {
+            font-size: $font-size--s;
+            font-weight: $font-weight--semi-bold;
+
+            display: block;
+
+            text-transform: uppercase;
+
+            color: $color-black;
+        }
+        > div
+        {
+            font-size: $font-size;
+
+            margin-right: $space-l;
+            margin-bottom: $space-m;
+
+            color: $color-grey;
+            @media screen and (min-width: $screen-lg)
+            {
+                margin-right: 0;
+            }
+            a
+            {
+                color: $color-grey;
+                &:hover,
+                &:focus
+                {
+                    color: $color-primary;
+                    background: none;
+                }
+            }
+        }
+        ul
+        {
+            margin-top: 0;
+            > li
+            {
+                font-size: $font-size;
+
+                margin-bottom: 0;
+                padding-left: 0;
+                &:before
+                {
+                    display: none;
+                }
+            }
+        }
+        ul > li:not(:last-child)
+        {
+            margin-right: $space-m;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+#header nav > ul
+{
+    display: flex;
+    > li
+    {
+        padding: 0 $space-s;
+        &:first-child
+        {
+            padding-left: 0;
+        }
+        &:last-child
+        {
+            padding-right: 0;
+        }
+        > a
+        {
+            font-size: $font-size--s;
+            font-weight: $font-weight--semi-bold;
+
+            text-transform: uppercase;
+
+            color: $color-grey;
+            &:hover,
+            &:focus
+            {
+                color: $color-primary;
+                background: none;
+            }
+        }
+    }
+}

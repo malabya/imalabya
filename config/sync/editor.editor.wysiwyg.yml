@@ -1,0 +1,59 @@
+uuid: 9467dc48-4565-40c7-baf4-c02e7c016260
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg
+  module:
+    - ckeditor
+format: wysiwyg
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Underline
+            - Italic
+            - Strike
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+        -
+          name: Styles
+          items:
+            - Format
+            - Styles
+        -
+          name: Tools
+          items:
+            - Source
+            - Maximize
+  plugins:
+    stylescombo:
+      styles: "code|Inline Code\r\ncode.language-php|Code - PHP\r\ncode.language-css|Code - CSS\r\ncode.language-js|Code - JS\r\ncode.language-twig|Code - Twig\r\ncode.language-yml|Code - YAML\r\np.info-box|Info Box"
+    language:
+      language_list: un
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

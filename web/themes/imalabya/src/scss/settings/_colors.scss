@@ -1,0 +1,11 @@
+$color-black: #0b1b23;
+$color-white: #fff;
+$color-grey: #8c8c8c;
+$color-primary: #ae162b;
+$color-secondary: #008cba;
+$color-header-bg: transparentize($color-secondary, .95);
+$color-link: $color-secondary;
+$color-link--hover: transparentize($color-link, .95);
+$success: transparentize(#26a769, .9);
+$danger: transparentize(#d72222, .9);
+$warning: transparentize(#ffd23f, .9);

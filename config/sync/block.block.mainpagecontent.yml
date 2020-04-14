@@ -1,0 +1,20 @@
+uuid: 122e78b0-04a7-4b01-a108-2d992d2e5b0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imalabya
+id: mainpagecontent
+theme: imalabya
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

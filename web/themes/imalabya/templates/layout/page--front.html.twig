@@ -1,0 +1,13 @@
+{% extends "@imalabya/layout/page.html.twig" %}
+{% block content %}
+	{{ attach_library("imalabya/index") }}
+	<main>
+		<div id="banner">
+			{{ page.header }}
+		</div>
+		{{ page.help }}
+		<div id="a-entries">
+			{{ page.content }}
+		</div>
+	</main>
+{% endblock %}

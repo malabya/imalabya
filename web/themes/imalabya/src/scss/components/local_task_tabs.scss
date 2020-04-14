@@ -1,0 +1,27 @@
+@import '../settings/colors';
+@import '../settings/variables';
+@import '../base/mixin';
+#block-imalabya-local-tasks
+{
+    @include box();
+    > ul
+    {
+        display: flex;
+        flex-flow: row wrap;
+        > li a
+        {
+            display: block;
+
+            margin-right: $space-s;
+            padding: $space;
+
+            background: none;
+            &:hover,
+            &:focus,
+            &.is-active
+            {
+                background: $color-link--hover;
+            }
+        }
+    }
+}
