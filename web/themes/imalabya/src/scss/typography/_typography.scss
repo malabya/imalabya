@@ -1,69 +1,88 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,900&display=swap&subset=devanagari,latin-ext');
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@400;700&display=swap");
 h1,
 h2,
 h3,
 h4,
 h5,
-h6
-{
-    font-family: $font-family;
-    font-weight: $font-weight--bold;
-    line-height: $line-height--s;
-
-    margin-bottom: $space-l;
+h6 {
+  margin-bottom: $space-l;
+  font-family: $font-primary;
+  font-weight: $font-weight--bold;
+  line-height: $line-height;
 }
-h1
-{
-    font-size: $font-size--xl;
-
-    color: $color-secondary;
-    @media screen and (min-width: $screen-sm)
-    {
-        font-size: $font-size--xxl;
-    };
-    @media screen and (min-width: $screen-lg)
-    {
-        font-size: $font-size--xxxl;
-    }
-}
-h2
-{
+h1 {
+  margin: 0;
+  color: $color-black;
+  font-size: $font-size--xl;
+  @media screen and (min-width: $screen-sm) {
     font-size: $font-size--xxl;
+  };
+  @media screen and (min-width: $screen-lg) {
+    font-size: $font-size--xxxl;
+  }
 }
-h3
-{
-    font-size: $font-size--xl;
+h3 {
+  margin-top: $space-xxl;
+  margin-bottom: $space-xl;
+  font-size: $font-size--l;
 }
-h4,
-h5
-{
-    font-size: $font-size--l;
+p {
+  margin: $space-text 0;
+  font-family: $font-secondary;
+  font-size: $font-size--text;
+  line-height: $line-height--l;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  a {
+    text-decoration: underline;
+  }
 }
-h6
-{
-    font-size: $font-size;
+strong {
+  font-weight: $font-weight--bold;
 }
-p
-{
-    font-size: $font-size--text;
-    line-height: $line-height;
-
-    margin-top: $space-text-top;
-    margin-bottom: $space-text-bottom;
-    &:last-child
-    {
-        margin-bottom: 0;
-    }
-    &:first-child
-    {
-        margin-top: 0;
-    }
+em {
+  font-style: italic;
 }
-strong
-{
-    font-weight: $font-weight--bold;
+ul,
+ol {
+  margin-bottom: $space-text;
+  font-family: $font-secondary;
+  font-size: $font-size--text;
+  > li {
+    margin-bottom: $space-s;
+  }
 }
-em
-{
+figure {
+  height: auto;
+  margin: $space-l 0;
+  background: $color-smoke;
+  @media screen and (min-width: $screen-sm) {
+    float: right;
+    max-width: $box;
+    margin-top: $space-s;
+    margin-right: -$box-space;
+    margin-bottom: $space-s;
+    margin-left: $space;
+  }
+  figcaption {
+    padding: $space-s;
+    font-family: $font-secondary;
+    font-size: $font-size--s;
     font-style: italic;
+  }
+}
+blockquote {
+  float: left;
+  margin: $space-text 0;
+  padding: $space-l;
+  border-left: 0.5rem solid $color-secondary;
+  background: $color-smoke;
+  font-style: italic;
+  > p {
+    font-size: $font-size--xl;
+  }
 }

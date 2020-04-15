@@ -1,39 +1,22 @@
-html
-{
-    font-size: 1rem;
-    @media screen and (min-width: $screen-lg)
-    {
-        font-size: 1vw;
-    }
+.dialog-off-canvas-main-canvas {
+  position: relative;
 }
-.dialog-off-canvas-main-canvas
-{
-    position: relative;
+body {
+  position: relative;
+  display: block;
+  margin: auto;
+  word-break: break-word;
+  color: $color-black;
+  font-family: $font-primary;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+
+  -webkit-font-smoothing: antialiased;
 }
-body
-{
-    font-family: $font-family;
-    font-size: $font-size;
-    font-weight: $font-weight;
-    line-height: $line-height;
-
-    position: relative;
-
-    display: block;
-
-    margin: auto;
-
-    word-break: break-word;
-
-    color: $color-black;
-
-    -webkit-font-smoothing: antialiased;
-}
-*
-{
-    box-sizing: border-box;
-    &:focus
-    {
-        outline-width: .0625rem;
-    }
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline-width: 0.0625rem;
+  }
 }

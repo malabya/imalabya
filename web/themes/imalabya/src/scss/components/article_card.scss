@@ -1,38 +1,27 @@
-@import '../settings/colors';
-@import '../settings/variables';
-@import '../base/mixin';
-.node--card
-{
-    position: relative;
-
-    padding: $space-l;
-
-    box-shadow: $box-shadow;
-    .cat
-    {
-        font-size: $font-size--xs;
-
-        display: inline-block;
-
-        margin-bottom: $space-s;
-        padding: $space-xs;
-
-        text-transform: uppercase;
-
-        border: .0625rem solid $color-grey;
-        border-radius: .05rem;
-        a
-        {
-            color: $color-grey;
-        }
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../base/mixin";
+.node--card {
+  position: relative;
+  padding: $space-l;
+  box-shadow: $box-shadow;
+  .cat {
+    display: inline-block;
+    margin-bottom: $space-s;
+    padding: $space-xs;
+    text-transform: uppercase;
+    border: 0.0625rem solid $color-grey;
+    border-radius: 0.05rem;
+    font-size: $font-size--xs;
+    a {
+      color: $color-grey;
     }
-    h3
-    {
-        margin-bottom: $space-xl;
-    }
-    footer
-    {
-        position: absolute;
-        bottom: $space-l;
-    }
+  }
+  h3 {
+    margin-bottom: $space-xl;
+  }
+  footer {
+    position: absolute;
+    bottom: $space-l;
+  }
 }

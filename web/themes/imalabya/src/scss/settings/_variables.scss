@@ -1,39 +1,38 @@
 // Font and text setting.
-$font-family: 'Poppins', sans-serif;
+$font-primary: "Poppins", sans-serif;
+$font-secondary: "Alegreya", serif;
 $font-weight: 400;
-$font-weight--light: 300;
-$font-weight--semi-bold: 600;
 $font-weight--bold: 700;
-$font-weight--black: 900;
-$font-size--xs: .75rem;
-$font-size--s: .875rem;
+$font-size--xs: 0.75rem;
+$font-size--s: 0.875rem;
 $font-size: 1.0625rem;
 $font-size--l: 1.75rem;
 $font-size--xl: 2rem;
 $font-size--xxl: 3rem;
 $font-size--xxxl: 4rem;
-$font-size--text: 1.125rem;
+$font-size--text: 1.25rem;
 $font-size--blockquote: 1.35rem;
-$line-height: 1.75;
-$line-height--s: 1.25;
+$line-height: 1.25;
+$line-height--l: 1.8;
 // Container and breakpoints.
-$container: 60rem;
+$container: 80rem;
 $screen-lg: 65rem;
 $screen-sm: 48rem;
 // Spacing
 $space: 1rem;
-$space-xs: .25rem;
-$space-s: .75rem;
+$space-xs: 0.25rem;
+$space-s: 0.75rem;
 $space-m: 1.125rem;
 $space-l: 1.5rem;
-$space-xl: 3rem;
-$space-xxl: 5rem;
+$space-xl: 2.5rem;
+$space-xxl: 6rem;
 $space-header-top: 15rem;
 $space-header-top-sm: 8rem;
 $space-header-bottom: 3.5rem;
-$space-text-top: 1.25rem;
-$space-text-bottom: 1.5rem;
+$space-text: 2.25rem;
 $space-text-aside: 8rem;
 // Misc
-$box-shadow: 0 .0625rem 1.25rem 0 rgba(0,0,0,.15);
+$box-shadow: 0 0.0625rem 1.25rem 0 rgba(0,0,0,0.15);
 $transition-time: 300ms;
+$box: 25rem;
+$box-space: 12rem;

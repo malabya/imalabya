@@ -1,31 +1,28 @@
-#header nav > ul
-{
-    display: flex;
-    > li
-    {
-        padding: 0 $space-s;
-        &:first-child
-        {
-            padding-left: 0;
-        }
-        &:last-child
-        {
-            padding-right: 0;
-        }
-        > a
-        {
-            font-size: $font-size--s;
-            font-weight: $font-weight--semi-bold;
-
-            text-transform: uppercase;
-
-            color: $color-grey;
-            &:hover,
-            &:focus
-            {
-                color: $color-primary;
-                background: none;
-            }
-        }
+#header nav > ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  > li {
+    margin: 0;
+    padding: 0 $space-s;
+    &:first-child {
+      padding-left: 0;
     }
+    &:last-child {
+      padding-right: 0;
+    }
+    > a {
+      text-transform: uppercase;
+      color: $color-grey;
+      font-family: $font-primary;
+      font-size: $font-size--s;
+      font-weight: $font-weight--bold;
+      &:hover,
+      &:focus {
+        color: $color-primary;
+        background: none;
+      }
+    }
+  }
 }

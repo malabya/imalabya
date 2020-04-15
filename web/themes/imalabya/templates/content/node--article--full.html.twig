@@ -2,7 +2,6 @@
 {% set createdDateTime = node.getCreatedTime|format_date('html_datetime') %}
 {% set createdDate = node.getCreatedTime|format_date('default') %}
 {% block content %}
-	{{ attach_library("imalabya/node") }}
 	{{ content.body }}
 	<footer>
 		<div>

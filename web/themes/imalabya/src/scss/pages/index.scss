@@ -1,18 +1,15 @@
-@import '../settings/colors';
-@import '../settings/variables';
-@import '../base/mixin';
-#a-entries
-{
-    display: grid;
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../base/mixin";
+#a-entries {
+  display: grid;
+  max-width: $container;
+  margin: auto;
+  padding-right: $space-l;
+  padding-left: $space-l;
 
-    max-width: $container;
-    margin: auto;
-    padding-right: $space-l;
-    padding-left: $space-l;
-
-    grid-gap: $space-l;
-    @media screen and (min-width: $screen-sm)
-    {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  grid-gap: $space-l;
+  @media screen and (min-width: $screen-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

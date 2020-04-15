@@ -1,66 +1,50 @@
 //Mixins
-@mixin no-bullet
-{
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
-    list-style-image: none;
+@mixin no-bullet {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
 }
 
-@mixin hide-text
-{
-    display: block;
-    overflow: hidden;
-
-    text-indent: -9000px;
+@mixin hide-text {
+  display: block;
+  overflow: hidden;
+  text-indent: -9000px;
 }
 
 // Clearfix
-@mixin clearfix()
-{
-    &:before,
-    &:after
-    {
-        display: table;
-
-        content: '';
-    }
-    &:after
-    {
-        clear: both;
-    }
+@mixin clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
 }
-@mixin box($margin: $space-l)
-{
-    max-width: $container;
-    margin: 0 auto $margin auto;
-    padding-right: $space-l;
-    padding-left: $space-l;
+@mixin container($margin: $space-l) {
+  max-width: $container;
+  margin: 0 auto $margin auto;
+  padding-right: $space;
+  padding-left: $space;
 }
-@mixin grid()
-{
-    display: grid;
+@mixin grid() {
+  display: grid;
 
-    grid-gap: $space-l;
-    grid-template-columns: repeat(12, 1fr);
-    @media screen and (min-width: $screen-lg)
-    {
-        grid-template-columns: 1fr $container 1fr;
-    }
+  grid-gap: $space-m;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  @media screen and (min-width: $screen-lg) {
+    grid-column-gap: $space-l;
+    grid-template-columns: repeat(14, minmax(0, 1fr));
+  }
 }
-@mixin container()
-{
-    padding-right: $space-l;
-    padding-left: $space-l;
-
-    grid-column: 1/-1;
-    @media screen and (min-width: $screen-sm)
-    {
-        grid-column: 3/-3;
-    }
-    @media screen and (min-width: $screen-lg)
-    {
-        grid-column: 2/-2;
-    }
+@mixin grid-content() {
+  grid-column: 1 / 7;
+  @media screen and (min-width: $screen-sm) {
+    grid-column: 3 / 13;
+  }
+  @media screen and (min-width: $screen-lg) {
+    grid-column: 3 / 11;
+  }
 }

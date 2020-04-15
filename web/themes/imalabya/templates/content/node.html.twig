@@ -72,28 +72,25 @@
 #}
 {%
   set classes = [
-    'node',
-		page ? 'node--page' : 'node--card'
+    'node'
   ]
 %}
 <article{{attributes.addClass(classes)}}>
-	{% block content %}
+	<div id="banner">
 		{{ title_prefix }}
-		{% if label and not page %}
-			<h2{{title_attributes}}>
-				<a href="{{ url }}" rel="bookmark">{{ label }}</a>
-			</h2>
-		{% endif %}
+		<h1{{title_attributes}}>
+			{{ label }}
+		</h1>
 		{{ title_suffix }}
+	</div>
 
-		{% if display_submitted %}
-			<footer>
-				{{ date }}
-			</footer>
-		{% endif %}
+	{% if display_submitted %}
+		<footer>
+			{{ date }}
+		</footer>
+	{% endif %}
 
-		<div{{content_attributes.addClass('node__content')}}>
-			{{ content }}
-		</div>
-	{% endblock %}
+	<div{{content_attributes.addClass('node__content')}}>
+		{{ content }}
+	</div>
 </article>
