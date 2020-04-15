@@ -1,0 +1,18 @@
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../base/mixin";
+#block-local-tasks {
+  position: absolute;
+  z-index: 100;
+  top: $space-header-top;
+  left: 0;
+  ul {
+    @include no-bullet();
+    > li a {
+      padding: $space;
+      font-family: $font-primary;
+      font-size: $font-size;
+      font-weight: $font-weight--bold;
+    }
+  }
+}

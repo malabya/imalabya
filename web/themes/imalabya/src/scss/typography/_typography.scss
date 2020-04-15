@@ -26,8 +26,20 @@ h3 {
   margin-bottom: $space-xl;
   font-size: $font-size--l;
 }
+a {
+  transition: background $transition-time linear, color $transition-time linear;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: $color-link;
+  background: transparent;
+  &:hover,
+  &:focus {
+    background: $color-link--hover;
+  }
+}
 p {
-  margin: $space-text 0;
+  max-width: $container;
+  margin: $space-text auto;
   font-family: $font-secondary;
   font-size: $font-size--text;
   line-height: $line-height--l;
@@ -56,10 +68,9 @@ ol {
     margin-bottom: $space-s;
   }
 }
-figure {
+.align-right {
   height: auto;
   margin: $space-l 0;
-  background: $color-smoke;
   @media screen and (min-width: $screen-sm) {
     float: right;
     max-width: $box;
@@ -67,6 +78,13 @@ figure {
     margin-right: -$box-space;
     margin-bottom: $space-s;
     margin-left: $space;
+  }
+}
+figure {
+  margin: 0;
+  background: $color-smoke;
+  > img {
+    width: 100%;
   }
   figcaption {
     padding: $space-s;
@@ -76,7 +94,6 @@ figure {
   }
 }
 blockquote {
-  float: left;
   margin: $space-text 0;
   padding: $space-l;
   border-left: 0.5rem solid $color-secondary;

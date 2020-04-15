@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display branding block.
+ * Theme override to display a block.
  *
  * Available variables:
  * - plugin_id: The ID of the block implementation.
@@ -25,6 +25,13 @@
  * @see template_preprocess_block()
  */
 #}
-<a href="{{ path('<front>') }}" rel="home" class="branding">
-	<img src="{{ site_logo }}" alt="{{ 'Home'|t }}"/>
-</a>
+<div id="block-local-tasks">
+	{{ title_prefix }}
+	{% if label %}
+		<h2{{title_attributes}}>{{ label }}</h2>
+	{% endif %}
+	{{ title_suffix }}
+	{% block content %}
+		{{ content }}
+	{% endblock %}
+</div>

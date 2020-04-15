@@ -5,8 +5,8 @@ global-styling:
       dist/css/main.css: {}
 admin:
   css:
-    component:
-      dist/css/components/local_task_tabs.css: {}
+    theme:
+      dist/css/admin/admin.css: {preprocess: false}
 index:
   css:
     theme:

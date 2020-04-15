@@ -1,0 +1,18 @@
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../base/mixin";
+@import "../typography/typography";
+p,
+ul,
+li,
+blockquote,
+h2,
+h3,
+figure {
+  max-width: $ckeditor-container;
+  margin-right: auto;
+  margin-left: auto;
+}
+.align-right {
+  margin-right: 12rem;
+}
