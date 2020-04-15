@@ -102,3 +102,15 @@ blockquote {
     font-size: $font-size--xl;
   }
 }
+pre,
+pre[class*="language-"] {
+  width: calc(100vw - 25rem);
+  margin-top: $space-text;
+  margin-bottom: $space-text;
+  margin-left: -$space-xxl;
+  padding: $space-xl;
+  line-height: $line-height--l;
+  > code {
+    line-height: $line-height--l;
+  }
+}

@@ -19,6 +19,18 @@ node:
   css:
     theme:
       dist/css/pages/node.css: {}
+prism:
+  css:
+    theme:
+      node_modules/prismjs/themes/prism-tomorrow.css: { weight: -50 }
+  js:
+    node_modules/prismjs/prism.js: {}
+    node_modules/prismjs/components/prism-clike.min.js: {}
+    node_modules/prismjs/components/prism-markup-templating.min.js: {}
+    node_modules/prismjs/components/prism-javadoclike.min.js: {}
+    node_modules/prismjs/components/prism-phpdoc.min.js: {}
+    node_modules/prismjs/components/prism-php-extras.min.js: {}
+    node_modules/prismjs/components/prism-php.min.js: {}
 article-card:
   css:
     theme:

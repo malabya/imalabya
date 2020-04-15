@@ -16,3 +16,12 @@ figure {
 .align-right {
   margin-right: 12rem;
 }
+pre {
+  max-width: $ckeditor-container;
+  margin-right: auto;
+  margin-left: auto;
+  background: $color-dark-grey;
+  > code {
+    color: $color-white;
+  }
+}
