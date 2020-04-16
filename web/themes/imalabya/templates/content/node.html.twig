@@ -75,23 +75,21 @@
     'node'
   ]
 %}
-{{ attach_library("imalabya/prism") }}
+
 <article{{attributes.addClass(classes)}}>
-	<div id="banner">
-		{{ title_prefix }}
-		<h1{{title_attributes}}>
-			{{ label }}
-		</h1>
-		{{ title_suffix }}
-	</div>
-
-	{% if display_submitted %}
-		<footer>
-			{{ date }}
-		</footer>
-	{% endif %}
-
+	<header id="banner">
+		{% block header %}
+			{{ title_prefix }}
+			<h1{{title_attributes}}>
+				{{ label }}
+			</h1>
+			{{ title_suffix }}
+		{% endblock %}
+	</header>
 	<div{{content_attributes.addClass('node__content')}}>
-		{{ content }}
+		<a id="main-content" tabindex="-1"></a>
+		{% block content %}
+			{{ content }}
+		{% endblock %}
 	</div>
 </article>

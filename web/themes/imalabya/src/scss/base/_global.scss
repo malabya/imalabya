@@ -20,3 +20,20 @@ body {
     outline-width: 0.0625rem;
   }
 }
+#skip-link {
+  position: absolute !important;
+  z-index: -10;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+  &:focus,
+  &:active {
+    z-index: 100;
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+  }
+}

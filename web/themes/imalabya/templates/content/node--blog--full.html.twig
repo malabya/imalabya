@@ -1,0 +1,21 @@
+{% extends "@imalabya/content/node.html.twig" %}
+{% set createdDateTime = node.getCreatedTime|format_date('html_datetime') %}
+{% set createdDate = node.getCreatedTime|format_date('post') %}
+{% block header %}
+	{{ attach_library("imalabya/blog") }}
+	{{ title_prefix }}
+	<h1{{title_attributes}}>
+		{{ label }}
+	</h1>
+	{{ title_suffix }}
+	<div class="node__meta" aria-label="Metadata">
+		<label for="time">{{ "Posted on"|t }}</label>
+		<time datetime={{ createdDateTime }}>{{ createdDate }}</time>
+		<span>{{ "//" }}</span>
+		{{ content.field_topics }}
+	</div>
+{% endblock %}
+{% block content %}
+	{{ attach_library("imalabya/prism") }}
+	{{ content.body }}
+{% endblock %}

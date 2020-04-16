@@ -1,0 +1,8 @@
+uuid: a94048a3-e9e7-4d01-9e48-aeb4a94c9129
+langcode: en
+status: true
+dependencies: {  }
+name: Topic
+vid: topic
+description: 'Group similar contents together.'
+weight: 0

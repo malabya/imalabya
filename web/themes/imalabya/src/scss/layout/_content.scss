@@ -2,7 +2,7 @@ main {
   @include container();
 }
 #banner {
-  margin-bottom: $space-xxl;
+  margin-bottom: $space-xl;
   padding: $space-header-top-sm 0 $space-header-bottom;
   background: $color-smoke;
   box-shadow: -50vw -1000vw 0 1000vw $color-smoke;

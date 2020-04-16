@@ -1,0 +1,8 @@
+uuid: 08b23a06-2cb9-4f59-a46f-af3253cf58ac
+langcode: en
+status: true
+dependencies: {  }
+id: post
+label: Post
+locked: false
+pattern: 'd F, Y'
