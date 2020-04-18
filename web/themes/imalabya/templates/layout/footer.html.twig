@@ -1,0 +1,30 @@
+{#
+/**
+* @file
+* Default theme implementation to display the footer block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+
+{% set year = "now"|date("Y") %}
+<div id="social">
+	<h2 class="visually-hidden show-sm">Find me on the internet</h2>
+	<a href="#">{% include "@imalabya/layout/partials/twitter.html.twig" %}{{ "Twitter"|t }}</a>
+	<a href="#">{% include "@imalabya/layout/partials/drupal.html.twig" %}{{ "Drupal"|t }}</a>
+	<a href="#">{% include "@imalabya/layout/partials/github.html.twig" %}{{ "Github"|t }}</a>
+	<a href="#">{% include "@imalabya/layout/partials/linkedin.html.twig" %}{{ "LinkedIn"|t }}</a>
+</div>
+<p>
+	{% include "@imalabya/layout/partials/code.html.twig" %}
+	{{ " with "|t }}
+	{% include "@imalabya/layout/partials/love.html.twig" %}
+	{% trans %}
+	by Malabya &copy;
+	{{ year }}. Powered by
+	{% endtrans %}
+	<a href="https://drupal.org">Drupal 9</a>
+</p>
+

@@ -13,16 +13,10 @@
       padding-right: 0;
     }
     > a {
-      text-transform: uppercase;
-      color: $color-dark-grey;
+      text-decoration: none;
       font-family: $font-primary;
-      font-size: $font-size--s;
+      font-size: $font-size--menu;
       font-weight: $font-weight--bold;
-      &:hover,
-      &:focus {
-        color: $color-link;
-        background: none;
-      }
     }
   }
 }

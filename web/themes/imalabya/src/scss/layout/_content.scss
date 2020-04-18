@@ -2,10 +2,10 @@ main {
   @include container();
 }
 #banner {
-  margin-bottom: $space-xl;
+  margin-bottom: $space;
   padding: $space-header-top-sm 0 $space-header-bottom;
-  background: $color-smoke;
-  box-shadow: -50vw -1000vw 0 1000vw $color-smoke;
+  background: $color-header-bg;
+  box-shadow: -50vw -1000vw 0 1000vw $color-header-bg;
   @media screen and (min-width: $screen-sm) {
     padding: $space-header-top 0 $space-header-bottom;
   }

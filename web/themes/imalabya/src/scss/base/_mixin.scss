@@ -26,8 +26,8 @@
 @mixin container($margin: $space-l) {
   max-width: $container;
   margin: 0 auto $margin auto;
-  padding-right: $space;
-  padding-left: $space;
+  padding-right: $space-m;
+  padding-left: $space-m;
 }
 @mixin grid() {
   display: grid;
@@ -36,15 +36,15 @@
   grid-template-columns: repeat(6, minmax(0, 1fr));
   @media screen and (min-width: $screen-lg) {
     grid-column-gap: $space-l;
-    grid-template-columns: repeat(14, minmax(0, 1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 }
 @mixin grid-content() {
   grid-column: 1 / 7;
   @media screen and (min-width: $screen-sm) {
-    grid-column: 3 / 13;
+    grid-column: 1 / 9;
   }
   @media screen and (min-width: $screen-lg) {
-    grid-column: 3 / 11;
+    grid-column: 1 / 10;
   }
 }

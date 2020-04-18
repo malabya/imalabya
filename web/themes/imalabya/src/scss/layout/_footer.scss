@@ -1,43 +1,40 @@
 #footer {
   @include container();
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
   margin-top: $space-xxl;
-  margin-bottom: $space-xl;
+  margin-bottom: 0;
   padding-top: $space-l;
-  border-top: 0.0625rem dotted $color-grey;
-  @media screen and (min-width: $screen-sm) {
-    justify-content: space-between;
-  }
-  p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $color-grey;
+  padding-bottom: $space-m;
+  color: $color-dark-grey;
+  > * {
+    margin: 0;
+    font-family: $font-primary;
     font-size: $font-size--s;
-    font-weight: $font-weight--bold;
-    @media screen and (min-width: $screen-sm) {
-      font-size: $font-size;
-    }
-    svg {
-      margin: 0 0.35rem;
-    }
+    font-weight: $font-weight--medium;
   }
-  #social {
-    text-align: center;
-    a {
-      margin: 0 0.25rem;
-      > svg path {
-        transition: all $transition-time ease-in-out;
-      }
-      &:hover,
-      &:focus {
-        > svg path {
-          fill: $color-primary;
-        }
-      }
-    }
+  p > svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+#social {
+  margin-bottom: $space;
+  @media screen and (min-width: $screen-sm) {
+    margin: 0;
+  }
+}
+#social > a {
+  display: inline-block;
+  width: 45%;
+  margin-bottom: $space;
+  text-decoration: none;
+  @media screen and (min-width: $screen-sm) {
+    width: auto;
+    margin-right: $space;
+  }
+  > svg {
+    vertical-align: middle;
   }
 }
