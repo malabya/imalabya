@@ -16,12 +16,22 @@ figure {
 .align-right {
   margin-right: 12rem;
 }
-pre {
-  max-width: $ckeditor-container;
-  margin-right: auto;
+pre[class*="language-"] {
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   margin-left: auto;
+  padding: initial;
+  line-height: inherit;
+}
+.cke_editable pre {
+  width: $ckeditor-container !important;
+  margin-top: $space-text;
+  margin-right: auto;
+  margin-bottom: $space-text;
+  margin-left: auto !important;
+  padding: $space-xl;
+  color: $color-smoke;
   background: $color-dark-grey;
-  > code {
-    color: $color-white;
-  }
+  line-height: $line-height--l;
 }

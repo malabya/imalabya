@@ -46,7 +46,7 @@ settings:
             - Maximize
   plugins:
     stylescombo:
-      styles: "code|Inline Code\r\ncode.language-php|Code - PHP\r\ncode.language-css|Code - CSS\r\ncode.language-js|Code - JS\r\ncode.language-twig|Code - Twig\r\ncode.language-yml|Code - YAML\r\np.info-box|Info Box"
+      styles: "code|Inline Code\r\npre.language-php|Code - PHP\r\npre.language-css|Code - CSS\r\npre.language-js|Code - JS\r\npre.language-twig|Code - Twig\r\npre.language-yml|Code - YAML\r\np.info-box|Info Box"
     language:
       language_list: un
 image_upload:

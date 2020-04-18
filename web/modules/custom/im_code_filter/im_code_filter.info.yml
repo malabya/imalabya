@@ -1,0 +1,5 @@
+name: Code block
+description: Provides code block markup for code highlighting.
+type: module
+package: Custom
+core_version_requirement: ^8|^9

@@ -1,7 +1,9 @@
 uuid: 31e1f697-a4a0-4eb0-9dc6-5f201d002918
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - im_code_filter
 name: WYSIWYG
 format: wysiwyg
 weight: 0
@@ -19,7 +21,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <pre> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <u> <s> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p class="info-box"> <code class="language-php language-css language-js language-twig language-yml">'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <u> <s> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p class="info-box"> <code class="language-php language-css language-js language-twig language-yml"> <pre class="language-php language-css language-js language-twig language-yml">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_autop:
@@ -45,4 +47,10 @@ filters:
     provider: filter
     status: true
     weight: 10
+    settings: {  }
+  im_code_style:
+    id: im_code_style
+    provider: im_code_filter
+    status: true
+    weight: 0
     settings: {  }
