@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Module file for Previous next module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function im_prevnext_theme() {
+  return [
+    'im_previous_next' => [
+      'render element' => 'elements',
+      'variables' => [
+        'previous' => NULL,
+        'next' => NULL,
+      ],
+    ],
+  ];
+}

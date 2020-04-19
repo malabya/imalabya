@@ -35,6 +35,10 @@ prism:
     node_modules/prismjs/components/prism-phpdoc.min.js: {}
     node_modules/prismjs/components/prism-php-extras.min.js: {}
     node_modules/prismjs/components/prism-php.min.js: {}
+previous_next:
+  css:
+    component:
+      dist/css/components/prevnext.css: {}
 article-card:
   css:
     theme:

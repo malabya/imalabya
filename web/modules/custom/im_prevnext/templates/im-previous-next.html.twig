@@ -1,0 +1,15 @@
+{{ attach_library('imalabya/previous_next') }}
+<ul id="prevnext">
+	{% if previous %}
+		<li>
+			<h5>{{ "Previous"|t }}</h5>
+			{{ previous }}
+		</li>
+	{% endif %}
+	{% if next %}
+		<li>
+			<h5>{{ "Next"|t }}</h5>
+			{{ next }}
+		</li>
+	{% endif %}
+</ul>

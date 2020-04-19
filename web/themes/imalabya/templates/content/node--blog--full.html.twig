@@ -17,4 +17,7 @@
 {% endblock %}
 {% block content %}
 	{{ content.body }}
+	<footer aria-label="Blog pager - Previous and Next blogs">
+		{% include "@im_prevnext/im-previous-next.html.twig" %}
+	</footer>
 {% endblock %}

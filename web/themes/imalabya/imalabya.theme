@@ -42,3 +42,12 @@ function imalabya_preprocess_page(&$variables) {
     $variables['#attached']['library'][] = 'imalabya/admin';
   }
 }
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function imalabya_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $variables['previous'] = \Drupal::service('pager.previous_next')->getPreviousNode($node);
+  $variables['next'] = \Drupal::service('pager.previous_next')->getNextNode($node);
+}

@@ -1,0 +1,22 @@
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../base/mixin";
+#prevnext {
+  @include no-bullet();
+  @include grid();
+  margin-top: $space-xxl;
+  margin-bottom: $space-l;
+  > li {
+    position: relative;
+    padding: $space-s;
+    text-align: right;
+    border: $border;
+
+    grid-column: 7 / span 6;
+    &:first-child {
+      text-align: left;
+
+      grid-column: 1 / span 6;
+    }
+  }
+}

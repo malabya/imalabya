@@ -25,6 +25,11 @@ h3 {
   margin-bottom: $space-xl;
   font-size: $font-size--l;
 }
+h5 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: $font-size--s;
+}
 a {
   transition: background $transition-time linear, color $transition-time linear;
   vertical-align: baseline;

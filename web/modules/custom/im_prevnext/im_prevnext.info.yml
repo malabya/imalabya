@@ -1,0 +1,5 @@
+name: Previous next block
+description: Provides previous next block for blogs.
+type: module
+package: Custom
+core_version_requirement: ^8|^9

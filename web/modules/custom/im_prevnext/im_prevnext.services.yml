@@ -1,0 +1,4 @@
+services:
+  pager.previous_next:
+    class: Drupal\im_prevnext\PreviousNext
+    arguments: ['@entity_type.manager']
