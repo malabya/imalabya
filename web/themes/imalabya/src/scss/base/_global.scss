@@ -37,11 +37,3 @@ body {
     height: auto;
   }
 }
-.show-sm {
-  @media screen and (max-width: $screen-sm) {
-    position: static !important;
-    overflow: visible;
-    width: 100%;
-    height: auto;
-  }
-}

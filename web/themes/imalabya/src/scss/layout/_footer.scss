@@ -2,39 +2,52 @@
   @include container();
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  margin-top: $space-xxl;
+  justify-content: center;
+  margin-top: $space-xl;
   margin-bottom: 0;
   padding-top: $space-l;
-  padding-bottom: $space-m;
+  padding-bottom: $space-l;
   color: $color-dark-grey;
+  border-top: $border-light;
+  @media screen and (min-width: $screen-sm) {
+    justify-content: space-between;
+  }
   > * {
     margin: 0;
     font-family: $font-primary;
     font-size: $font-size--s;
     font-weight: $font-weight--medium;
   }
+  p {
+    margin-bottom: $space;
+    @media screen and (min-width: $screen-sm) {
+      margin: 0;
+    }
+  }
   p > svg {
     display: inline-block;
     vertical-align: middle;
   }
 }
-#social {
-  margin-bottom: $space;
-  @media screen and (min-width: $screen-sm) {
-    margin: 0;
-  }
-}
 #social > a {
   display: inline-block;
-  width: 45%;
-  margin-bottom: $space;
+  width: auto;
+  margin-right: $space;
+  margin-bottom: 0;
   text-decoration: none;
-  @media screen and (min-width: $screen-sm) {
-    width: auto;
-    margin-right: $space;
+  &:last-child {
+    margin-right: 0;
   }
   > svg {
     vertical-align: middle;
+    path {
+      transition: $transition-time fill ease-in-out;
+    }
+  }
+  &:hover {
+    background: none;
+    > svg path {
+      fill: $color-primary;
+    }
   }
 }
