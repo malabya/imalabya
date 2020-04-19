@@ -11,9 +11,9 @@
 
 {% set year = "now"|date("Y") %}
 <p>
-	{% include "@imalabya/layout/partials/code.html.twig" %}
+	{% include "@imalabya/svg/code.html.twig" %}
 	{{ " with "|t }}
-	{% include "@imalabya/layout/partials/love.html.twig" %}
+	{% include "@imalabya/svg/love.html.twig" %}
 	{% trans %}
 	by Malabya &copy;
 	{{ year }}. Powered by
@@ -22,16 +22,19 @@
 </p>
 <div id="social">
 	<h2 class="visually-hidden show-sm">Find me on the internet</h2>
-	<a href="#">{% include "@imalabya/layout/partials/twitter.html.twig" %}
+	<a href="#">{% include "@imalabya/svg/twitter.html.twig" %}
 		<span class="visually-hidden">{{ "Twitter"|t }}</span>
 	</a>
-	<a href="#">{% include "@imalabya/layout/partials/drupal.html.twig" %}
+	<a href="#">{% include "@imalabya/svg/drupal.html.twig" %}
 		<span class="visually-hidden">{{ "Drupal"|t }}</span>
 	</a>
-	<a href="#">{% include "@imalabya/layout/partials/github.html.twig" %}
+	<a href="#">{% include "@imalabya/svg/github.html.twig" %}
 		<span class="visually-hidden">{{ "Github"|t }}</span>
 	</a>
-	<a href="#">{% include "@imalabya/layout/partials/linkedin.html.twig" %}
+	<a href="#">{% include "@imalabya/svg/linkedin.html.twig" %}
 		<span class="visually-hidden">{{ "LinkedIn"|t }}</span>
+	</a>
+	<a href="#">{% include "@imalabya/svg/rss.html.twig" %}
+		<span class="visually-hidden">{{ "RSS"|t }}</span>
 	</a>
 </div>

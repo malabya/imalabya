@@ -1,0 +1,30 @@
+{#
+/**
+* @file
+* Immplementation of teaser view mode of Blogs.
+*/
+#}
+
+{{ attach_library('imalabya/blog-teaser') }}
+<article{{attributes.addClass('b-entry')}}>
+	<aside class="post-date">
+		<span class="date">
+			{{ node.created.value|date("d") }}
+		</span>
+		<span class="month-year">
+			{{ node.created.value|date("F Y") }}
+		</span>
+	</aside>
+	<header class="b-title">
+		{{ title_prefix }}
+		<h2{{title_attributes}}>
+			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+		</h2>
+		{{ title_suffix }}
+	</header>
+	<div class="b-content">
+		{{ content.body }}
+		<label for="tags">{{ "Tags:" }}</label>
+		{{ content.field_topics }}
+	</div>
+</article>

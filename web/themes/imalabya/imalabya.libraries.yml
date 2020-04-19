@@ -39,7 +39,11 @@ previous_next:
   css:
     component:
       dist/css/components/prevnext.css: {}
-article-card:
+blog-teaser:
   css:
-    theme:
-      dist/css/components/article_card.css: {}
+    component:
+      dist/css/components/blog-teaser.css: {}
+pager:
+  css:
+    component:
+      dist/css/components/pager.css: {}

@@ -37,3 +37,10 @@ body {
     height: auto;
   }
 }
+label {
+  margin-right: $space-s;
+  text-transform: uppercase;
+  color: $color-dark-grey;
+  font-size: $font-size--xs;
+  font-weight: $font-weight--bold;
+}

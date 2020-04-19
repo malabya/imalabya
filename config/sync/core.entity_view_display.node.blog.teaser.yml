@@ -18,15 +18,22 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 2
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_topics:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden:
-  field_topics: true
+hidden: {  }
