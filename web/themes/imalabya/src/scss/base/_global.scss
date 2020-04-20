@@ -44,3 +44,6 @@ label {
   font-size: $font-size--xs;
   font-weight: $font-weight--bold;
 }
+.more-link {
+  @include button();
+}

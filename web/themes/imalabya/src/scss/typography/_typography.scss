@@ -20,6 +20,12 @@ h1 {
     font-size: $font-size--xxxl;
   }
 }
+h2 {
+  margin-top: $space-xxl;
+  margin-bottom: $space-l;
+  text-transform: uppercase;
+  color: $color-grey;
+}
 h3 {
   margin-top: $space-xxl;
   margin-bottom: $space-xl;

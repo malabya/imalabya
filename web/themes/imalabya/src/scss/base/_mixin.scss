@@ -48,3 +48,12 @@
     grid-column: 1 / 10;
   }
 }
+@mixin button {
+  padding: $space-s $space;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-primary;
+  border: 0.125rem solid $color-primary;
+  font-size: $font-size--s;
+  font-weight: $font-weight--medium;
+}

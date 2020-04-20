@@ -14,7 +14,9 @@ figure {
   margin-left: auto;
 }
 .align-right {
-  margin-right: 12rem;
+  > img {
+    max-width: 100%;
+  }
 }
 pre[class*="language-"] {
   width: auto;
