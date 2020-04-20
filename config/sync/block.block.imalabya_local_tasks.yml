@@ -11,7 +11,7 @@ _core:
 id: imalabya_local_tasks
 theme: imalabya
 region: content
-weight: -4
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

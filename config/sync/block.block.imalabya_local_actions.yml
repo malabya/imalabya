@@ -11,7 +11,7 @@ _core:
 id: imalabya_local_actions
 theme: imalabya
 region: content
-weight: -3
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

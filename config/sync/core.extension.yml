@@ -10,7 +10,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  im_code_filter: 0
+  im_filters: 0
   im_prevnext: 0
   image: 0
   link: 0

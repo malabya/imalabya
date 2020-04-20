@@ -1,0 +1,5 @@
+name: Text format filters
+description: Provides custom filters for text formats.
+type: module
+package: Custom
+core_version_requirement: ^8|^9
