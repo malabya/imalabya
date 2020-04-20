@@ -2,6 +2,8 @@ uuid: f013e530-607c-4b05-b710-32a32d800473
 langcode: en
 status: true
 dependencies:
+  module:
+    - user
   theme:
     - imalabya
 _core:
@@ -19,4 +21,11 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

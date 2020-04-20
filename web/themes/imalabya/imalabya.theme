@@ -5,6 +5,8 @@
  * Functions to support theming in the imalabya theme.
  */
 
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
 
@@ -47,7 +49,38 @@ function imalabya_preprocess_page(&$variables) {
  * Implements hook_preprocess_node().
  */
 function imalabya_preprocess_node(&$variables) {
+  // Blog pager to navigate to next and previous blogs.
   $node = $variables['node'];
   $variables['previous'] = \Drupal::service('pager.previous_next')->getPreviousNode($node);
   $variables['next'] = \Drupal::service('pager.previous_next')->getNextNode($node);
+  $variables['#cache']['contexts'][] = 'url';
+
+  // Render breadcrumb.
+  $block_manager = \Drupal::service('plugin.manager.block');
+  $config = [];
+  $plugin_block = $block_manager->createInstance('system_breadcrumb_block', $config);
+  $variables['breadcrumb'] = $plugin_block->build();
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ */
+function imalabya_preprocess_breadcrumb(&$variables) {
+  $route_match = \Drupal::routeMatch();
+  $node = $route_match->getParameter('node');
+  if ($node instanceof NodeInterface && $node->bundle() === 'blog') {
+    $breadcrumb = [
+      0 => [
+        'text' => t('Home'),
+        'url' => Url::fromRoute("<front>"),
+      ],
+      1 => [
+        'text' => t('Blog'),
+        'url' => Url::fromUserInput("/blog")->toString(),
+      ],
+    ];
+  }
+
+  $variables['breadcrumb'] = $breadcrumb;
+  $variables['#cache']['contexts'][] = 'url';
 }

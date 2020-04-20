@@ -3,6 +3,7 @@
 {% set createdDate = node.getCreatedTime|format_date('post') %}
 {% block header %}
 	{{ attach_library("imalabya/blog") }}
+	{{ breadcrumb }}
 	{{ title_prefix }}
 	<h1{{title_attributes}}>
 		{{ label }}

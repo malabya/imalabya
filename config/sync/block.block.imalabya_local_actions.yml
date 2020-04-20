@@ -2,6 +2,8 @@ uuid: 3252e4b6-f85a-4f8a-8d8c-a3085a215cb3
 langcode: en
 status: true
 dependencies:
+  module:
+    - user
   theme:
     - imalabya
 _core:
@@ -17,4 +19,11 @@ settings:
   label: 'Primary admin actions'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
