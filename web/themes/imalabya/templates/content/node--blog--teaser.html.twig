@@ -4,17 +4,10 @@
 * Immplementation of teaser view mode of Blogs.
 */
 #}
-
+{% set createdDateTime = node.getCreatedTime|format_date('html_datetime') %}
+{% set createdDate = node.getCreatedTime|format_date('post') %}
 {{ attach_library('imalabya/blog-teaser') }}
-<article{{attributes.addClass('b-entry')}}>
-	<aside class="post-date">
-		<span class="date">
-			{{ node.created.value|date("d") }}
-		</span>
-		<span class="month-year">
-			{{ node.created.value|date("F Y") }}
-		</span>
-	</aside>
+<article class='b-entry'>
 	<header class="b-title">
 		{{ title_prefix }}
 		<h2{{title_attributes}}>
@@ -22,9 +15,18 @@
 		</h2>
 		{{ title_suffix }}
 	</header>
+	<aside class="b-aside">
+		<time datetime={{ createdDateTime }} class="visually-hidden">{{ createdDate }}</time>
+		<span class="date">
+			{{ node.created.value|date("d") }}
+		</span>
+		<span class="month-year">
+			{{ node.created.value|date("F Y") }}
+		</span>
+	</aside>
 	<div class="b-content">
 		{{ content.body }}
-		<label for="tags">{{ "Tags:" }}</label>
+		<label>{{ "Tags:" }}</label>
 		{{ content.field_topics }}
 	</div>
 </article>

@@ -70,13 +70,7 @@
  *   in different view modes.
  */
 #}
-{%
-  set classes = [
-    'node'
-  ]
-%}
-
-<article{{attributes.addClass(classes)}}>
+<article class="node" typeof="schema:Article">
 	<header id="banner">
 		{% block header %}
 			{{ title_prefix }}
