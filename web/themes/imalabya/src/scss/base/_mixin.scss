@@ -49,6 +49,8 @@
   }
 }
 @mixin button {
+  display: inline-block;
+  margin: $space 0;
   padding: $space-s $space;
   text-decoration: none;
   text-transform: uppercase;

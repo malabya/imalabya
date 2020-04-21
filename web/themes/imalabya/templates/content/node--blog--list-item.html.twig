@@ -1,0 +1,22 @@
+{#
+/**
+* @file
+* Immplementation of list item view mode of Blogs.
+*/
+#}
+{% set createdDateTime = node.getCreatedTime|format_date('html_datetime') %}
+{% set createdDate = node.getCreatedTime|format_date('post') %}
+{{ attach_library('imalabya/index') }}
+<li class='l-entry'>
+	<header class="l-header">
+		<label>{{ "Posted on"|t }}</label>
+		<time datetime={{ createdDateTime }}>{{ createdDate }}</time>
+		<span>{{ "//" }}</span>
+		{{ content.field_topics }}
+	</header>
+	{{ title_prefix }}
+	<h3{{title_attributes}}>
+		<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+	</h2>
+	{{ title_suffix }}
+</li>

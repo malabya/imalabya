@@ -1,0 +1,27 @@
+uuid: 519b652b-7788-40a8-a952-17c6c6696f0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.list_item
+    - field.field.node.blog.body
+    - field.field.node.blog.field_topics
+    - node.type.blog
+  module:
+    - user
+id: node.blog.list_item
+targetEntityType: node
+bundle: blog
+mode: list_item
+content:
+  field_topics:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  body: true
+  links: true

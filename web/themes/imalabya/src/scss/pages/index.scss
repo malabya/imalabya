@@ -1,15 +1,27 @@
 @import "../settings/colors";
 @import "../settings/variables";
 @import "../base/mixin";
-#a-entries {
-  display: grid;
-  max-width: $container;
-  margin: auto;
-  padding-right: $space-l;
-  padding-left: $space-l;
-
-  grid-gap: $space-l;
-  @media screen and (min-width: $screen-sm) {
-    grid-template-columns: repeat(2, 1fr);
+.l-feed {
+  @include grid();
+  @include no-bullet();
+}
+.l-entry {
+  @include grid-content();
+  margin-bottom: $space-l;
+  font-family: $font-primary;
+  > h3 {
+    margin: $space-s 0;
+    font-size: $font-size--m;
+    a {
+      color: $color-primary;
+    }
+  }
+}
+.l-header {
+  color: $color-dark-grey;
+  font-size: $font-size--s;
+  span {
+    margin: 0 0.5rem 0 0.25rem;
+    letter-spacing: -0.5rem;
   }
 }

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.list_item
     - core.entity_view_mode.node.teaser
     - node.type.blog
     - system.menu.main
@@ -74,7 +75,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: list_item
       fields:
         title:
           id: title
@@ -221,6 +223,17 @@ display:
         type: normal
         title: Blog
         menu_name: main
+      style:
+        type: default
+        options: {  }
+      defaults:
+        style: false
+        row: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:
