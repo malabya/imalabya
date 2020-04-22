@@ -29,6 +29,10 @@ class FigureWrapper extends FilterBase {
     }
 
     foreach ($elements as $element) {
+      // Skip if image already have a figure wrapper.
+      if ($element->parentNode->tagName === 'figure') {
+        continue;
+      }
       $class = $element->getAttribute('class');
       $src = $element->getAttribute('src');
       $alt = $element->getAttribute('alt');

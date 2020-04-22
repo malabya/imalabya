@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Theme override to display an exception node.
+#}
+{{ attach_library('imalabya/exception') }}
+<article class="node" typeof="schema:Article">
+	<div{{content_attributes.addClass('node__content')}}>
+		<a id="main-content" tabindex="-1"></a>
+		{% block content %}
+			{{ content }}
+		{% endblock %}
+	</div>
+</article>

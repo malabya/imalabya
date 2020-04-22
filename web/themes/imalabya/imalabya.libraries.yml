@@ -19,6 +19,10 @@ node:
   css:
     theme:
       dist/css/pages/node.css: {}
+exception:
+  css:
+    theme:
+      dist/css/pages/exception.css: {}
 blog:
   css:
     theme:

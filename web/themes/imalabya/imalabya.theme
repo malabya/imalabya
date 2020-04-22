@@ -34,6 +34,35 @@ function imalabya_theme_suggestions_page_alter(array &$suggestions, array $varia
     $content_type = $node->bundle();
     $suggestions[] = 'page__' . $content_type;
   }
+
+  if (in_array(status_code(), [401, 403, 404])) {
+    $suggestions[] = 'page__exception';
+  }
+}
+
+/**
+ * Implements template_theme_suggestions_node_alter().
+ */
+function imalabya_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  if (in_array(status_code(), [401, 403, 404])) {
+    $suggestions[] = 'node__exception';
+  }
+}
+
+/**
+ * Get the status code.
+ */
+function status_code() {
+  // Thanks to bit.ly/axl-http-error for the code snippet
+  // Get Request Object.
+  $request = \Drupal::request();
+
+  // If there is HTTP Exception..
+  if ($exception = $request->attributes->get('exception')) {
+    // Get the status code.
+    $status_code = $exception->getStatusCode();
+    return $status_code;
+  }
 }
 
 /**

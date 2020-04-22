@@ -1,0 +1,9 @@
+@import "../settings/colors";
+@import "../settings/variables";
+.align-right {
+  margin-right: 0;
+}
+main {
+  padding-top: $space-header-top;
+  padding-bottom: $space-header-bottom;
+}
