@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override for blog view template.
+ *
+ */
+#}
+
+<div class="l-feed">
+	{{ header }}
+
+	{{ footer }}
+	{% if rows -%}
+		{{ rows }}
+	{% elseif empty -%}
+		{{ empty }}
+	{% endif %}
+</div>
+{{ more }}

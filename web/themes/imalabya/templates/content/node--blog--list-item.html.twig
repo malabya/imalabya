@@ -6,8 +6,8 @@
 #}
 {% set createdDateTime = node.getCreatedTime|format_date('html_datetime') %}
 {% set createdDate = node.getCreatedTime|format_date('post') %}
-{{ attach_library('imalabya/index') }}
-<li class='l-entry'>
+{{ attach_library('imalabya/blog-list-item') }}
+<article class='l-entry'>
 	<header class="l-header">
 		<label>{{ "Posted on"|t }}</label>
 		<time datetime={{ createdDateTime }}>{{ createdDate }}</time>
@@ -19,4 +19,4 @@
 		<a href="{{ url }}" rel="bookmark">{{ label }}</a>
 	</h2>
 	{{ title_suffix }}
-</li>
+</article>

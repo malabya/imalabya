@@ -22,7 +22,7 @@ h1 {
 }
 h2 {
   margin-top: $space-xxl;
-  margin-bottom: $space-l;
+  margin-bottom: $space;
   text-transform: uppercase;
   color: $color-secondary;
   font-size: $font-size;
@@ -50,18 +50,12 @@ a {
   }
 }
 p {
-  margin: $space-text auto;
+  margin: 0 auto $space-text auto;
   font-family: $font-secondary;
   font-size: $font-size--text;
   line-height: $line-height--l;
   &:last-child {
     margin-bottom: 0;
-  }
-  &:first-child {
-    margin-top: 0;
-  }
-  a {
-    text-decoration: underline;
   }
 }
 strong {

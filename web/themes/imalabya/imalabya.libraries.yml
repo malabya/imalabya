@@ -43,6 +43,10 @@ blog-teaser:
   css:
     component:
       dist/css/components/blog-teaser.css: {}
+blog-list-item:
+  css:
+    component:
+      dist/css/components/blog-list-item.css: {}
 pager:
   css:
     component:

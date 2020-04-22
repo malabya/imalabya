@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.list_item
-    - core.entity_view_mode.node.teaser
     - node.type.blog
     - system.menu.main
+    - views.view.browse_by_topic
   module:
     - node
     - user
@@ -168,8 +168,35 @@ display:
             label: ''
           granularity: second
       title: Blog
-      header: {  }
-      footer: {  }
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          view_to_insert: 'browse_by_topic:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
+      footer:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          view_to_insert: 'browse_by_topic:block_1'
+          inherit_arguments: false
+          plugin_id: view
       empty: {  }
       relationships: {  }
       arguments: {  }
@@ -200,9 +227,22 @@ display:
         use_more: false
         use_more_always: false
         use_more_text: false
+        header: false
       use_more: true
       use_more_always: true
       use_more_text: 'More blog posts'
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<h2 aria-label="Latest blog posts">Latest blog posts</h2>'
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:
@@ -225,15 +265,20 @@ display:
         menu_name: main
       style:
         type: default
-        options: {  }
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
       defaults:
         style: false
         row: false
+        header: false
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: list_item
+      header: {  }
     cache_metadata:
       max-age: -1
       contexts:

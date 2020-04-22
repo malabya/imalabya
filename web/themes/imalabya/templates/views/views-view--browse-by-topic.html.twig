@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override for browse by topic view template.
+ */
+#}
+<aside id="browse-topic">
+	<div class="container">
+		{{ header }}
+		{% if rows -%}
+			{{ rows }}
+		{% elseif empty -%}
+			{{ empty }}
+		{% endif %}
+	</div>
+</aside>
