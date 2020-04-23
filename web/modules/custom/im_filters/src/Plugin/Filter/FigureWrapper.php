@@ -22,6 +22,7 @@ class FigureWrapper extends FilterBase {
    */
   public function process($text, $langcode) {
 
+    $text = preg_replace("#<p>(\s*(?:<a.*>)?\s*<img .*>\s*(?:</a.*>)?\s*)</p>#Uim", "$1", $text);
     $dom = Html::load($text);
     $elements = $dom->getElementsByTagName('img');
     if ($elements->length === 0) {

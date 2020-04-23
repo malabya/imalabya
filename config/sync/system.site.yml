@@ -3,8 +3,8 @@ name: iMalabya
 mail: imalabya@gmail.com
 slogan: ''
 page:
-  403: ''
-  404: ''
+  403: /node/10
+  404: /node/10
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
