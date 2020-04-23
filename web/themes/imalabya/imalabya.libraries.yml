@@ -7,6 +7,10 @@ fonts:
   css:
     theme:
       https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,800;1,400;1,800&family=Poppins:wght@400;500;700&display=swap: { type: external, minified: true }
+quicklink:
+  js:
+    node_modules/quicklink/dist/quicklink.umd.js: {}
+    dist/js/quicklink.js: {}
 admin:
   css:
     theme:

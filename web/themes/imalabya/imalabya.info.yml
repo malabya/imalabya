@@ -6,6 +6,7 @@ core_version_requirement: ^8|^9
 libraries:
   - imalabya/global-styling
   - imalabya/fonts
+  - imalabya/quicklink
 ckeditor_stylesheets:
   - dist/css/admin/ckeditor.css
 base theme: stable
