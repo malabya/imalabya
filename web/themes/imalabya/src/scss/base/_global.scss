@@ -18,6 +18,7 @@ body {
   box-sizing: border-box;
   &:focus {
     outline-width: 0.0625rem;
+    outline-offset: 0.125rem;
   }
 }
 #skip-link {

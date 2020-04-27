@@ -1,0 +1,5 @@
+name: Contact - Get in touch
+description: Provides a custom form for contact and a block to be placed on the Get in Touch page.
+type: module
+package: Custom
+core_version_requirement: ^8|^9

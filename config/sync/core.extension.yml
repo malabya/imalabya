@@ -10,6 +10,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  im_contact: 0
   im_filters: 0
   im_prevnext: 0
   image: 0

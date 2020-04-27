@@ -1,0 +1,33 @@
+uuid: 619845f6-3379-420c-8c92-d1b369e39eaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - im_contact
+    - node
+    - system
+  theme:
+    - imalabya
+id: contact
+theme: imalabya
+region: content
+weight: 0
+provider: null
+plugin: im_contact_block
+settings:
+  id: im_contact_block
+  label: Contact
+  provider: im_contact
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false

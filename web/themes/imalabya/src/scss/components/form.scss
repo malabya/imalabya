@@ -1,0 +1,35 @@
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../base/mixin";
+form {
+  @include grid();
+  margin-top: $space-xl;
+  margin-bottom: $space-xl;
+  > * {
+    @include grid-content();
+  }
+  > .form-item {
+    margin-bottom: $space-s;
+    label {
+      display: block;
+      margin-bottom: $space-xs;
+      text-transform: capitalize;
+      color: $color-primary;
+      font-size: $font-size;
+    }
+  }
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: $space-s;
+  border: 0.125rem solid $color-primary;
+  font-size: $font-size;
+}
+input[type="submit"],
+input[type="button"],
+button {
+  @include button();
+
+  grid-column: 1/4;
+}

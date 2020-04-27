@@ -52,10 +52,16 @@
   display: inline-block;
   margin: $space 0;
   padding: $space-s $space;
+  transition: $transition-time background ease-in-out;
   text-decoration: none;
   text-transform: uppercase;
   color: $color-primary;
   border: 0.125rem solid $color-primary;
+  background: $color-white;
   font-size: $font-size--s;
   font-weight: $font-weight--medium;
+  &:hover {
+    cursor: pointer;
+    background: $color-link--hover-bg;
+  }
 }

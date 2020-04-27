@@ -121,3 +121,10 @@ function imalabya_preprocess_views_view(&$variables) {
   $variables['more']['#options']['attributes']['class'] = ['more-link'];
   $variables['more']['#options']['attributes']['role'] = ['button'];
 }
+
+/**
+ * Implements template_preprocess_form().
+ */
+function imalabya_preprocess_form(&$variables) {
+  $variables['#attached']['library'][] = 'imalabya/form';
+}

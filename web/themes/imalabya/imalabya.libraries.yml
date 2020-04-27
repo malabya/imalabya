@@ -59,3 +59,7 @@ pager:
   css:
     component:
       dist/css/components/pager.css: {}
+form:
+  css:
+    component:
+      dist/css/components/form.css: {}

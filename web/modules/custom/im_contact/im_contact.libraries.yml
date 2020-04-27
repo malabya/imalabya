@@ -1,0 +1,6 @@
+formspree:
+  css:
+    theme:
+      css/formspree.css: {}
+  js:
+    js/formspree.js: {}
