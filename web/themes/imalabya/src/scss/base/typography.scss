@@ -93,6 +93,14 @@ ol {
     margin-right: $box-space;
   }
 }
+.align-center {
+  height: auto;
+  margin-top: $space-l;
+  margin-right: -$space-l;
+  margin-bottom: $space-l;
+  margin-left: -$space-l;
+  box-shadow: $box-shadow;
+}
 figure {
   margin: 0;
   background: $color-smoke;
@@ -130,4 +138,14 @@ pre[class*="language-"] {
   > code {
     line-height: $line-height--l;
   }
+}
+p > code,
+li > code {
+  padding: 0 $space-xs;
+  color: $color-dark-grey;
+  background: $color-smoke;
+}
+li > .align-center {
+  margin-right: 0;
+  margin-left: 0;
 }
