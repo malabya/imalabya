@@ -5,8 +5,6 @@ package: Custom
 core_version_requirement: ^8|^9
 libraries:
   - imalabya/global-styling
-  - imalabya/fonts
-  - imalabya/quicklink
 ckeditor_stylesheets:
   - dist/css/admin/ckeditor.css
 base theme: stable
@@ -17,3 +15,33 @@ regions:
   help: Help
   content: Content
   footer: Footer
+libraries-override:
+  system/base:
+    css:
+      component:
+        /core/themes/stable/css/system/components/ajax-progress.module.css: false
+        /core/themes/stable/css/system/components/align.module.css: false
+        /core/themes/stable/css/system/components/autocomplete-loading.module.css: false
+        /core/themes/stable/css/system/components/fieldgroup.module.css: false
+        /core/themes/stable/css/system/components/container-inline.module.css: false
+        /core/themes/stable/css/system/components/clearfix.module.css: false
+        /core/themes/stable/css/system/components/details.module.css: false
+        /core/themes/stable/css/system/components/hidden.module.css: false
+        /core/themes/stable/css/system/components/item-list.module.css: false
+        /core/themes/stable/css/system/components/js.module.css: false
+        /core/themes/stable/css/system/components/nowrap.module.css: false
+        /core/themes/stable/css/system/components/position-container.module.css: false
+        /core/themes/stable/css/system/components/progress.module.css: false
+        /core/themes/stable/css/system/components/reset-appearance.module.css: false
+        /core/themes/stable/css/system/components/resize.module.css: false
+        /core/themes/stable/css/system/components/sticky-header.module.css: false
+        /core/themes/stable/css/system/components/system-status-counter.css: false
+        /core/themes/stable/css/system/components/system-status-report-counters.css: false
+        /core/themes/stable/css/system/components/system-status-report-general-info.css: false
+        /core/themes/stable/css/system/components/tabledrag.module.css: false
+        /core/themes/stable/css/system/components/tablesort.module.css: false
+        /core/themes/stable/css/system/components/tree-child.module.css: false
+  views/views.module:
+    css:
+      component:
+        /core/themes/stable/css/views/views.module.css: false

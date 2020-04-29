@@ -1,36 +1,61 @@
+# Global style
 global-styling:
-  version: 1
+  weight: -10
   css:
-    theme:
-      dist/css/main.css: {}
-fonts:
-  css:
-    theme:
-      https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,800;1,400;1,800&family=Poppins:wght@400;500;700&display=swap: { type: external, minified: true }
-quicklink:
+    base:
+      //fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,800;1,400;1,800&family=Poppins:wght@400;500;700: {}
+      dist/css/base/base.css: {}
+      dist/css/base/typography.css: {}
+    layout:
+      dist/css/base/layout/layout.css: {}
+    component:
+      dist/css/base/components/components.css: {}
   js:
     node_modules/quicklink/dist/quicklink.umd.js: {}
     dist/js/quicklink.js: {}
-admin:
+
+# Component styling
+previous_next:
   css:
-    theme:
-      dist/css/admin/admin.css: { preprocess: false }
+    component:
+      dist/css/component/prevnext.css: {}
+blog-teaser:
+  css:
+    component:
+      dist/css/component/blog-teaser.css: {}
+blog-list-item:
+  css:
+    component:
+      dist/css/component/blog-list-item.css: {}
+pager:
+  css:
+    component:
+      dist/css/component/pager.css: {}
+form:
+  css:
+    component:
+      dist/css/component/form.css: {}
+
+# Page specific styles
 index:
   css:
     theme:
-      dist/css/pages/index.css: {}
+      dist/css/theme/index.css: {}
 node:
   css:
     theme:
-      dist/css/pages/node.css: {}
+      dist/css/theme/node.css: {}
 exception:
   css:
     theme:
-      dist/css/pages/exception.css: {}
+      dist/css/theme/exception.css: {}
 blog:
+  weight: 10
   css:
     theme:
-      dist/css/pages/blog.css: {}
+      dist/css/theme/blog.css: {}
+
+# Third party styles
 prism:
   css:
     theme:
@@ -43,23 +68,8 @@ prism:
     node_modules/prismjs/components/prism-phpdoc.min.js: {}
     node_modules/prismjs/components/prism-php-extras.min.js: {}
     node_modules/prismjs/components/prism-php.min.js: {}
-previous_next:
+# Admin styles
+admin:
   css:
-    component:
-      dist/css/components/prevnext.css: {}
-blog-teaser:
-  css:
-    component:
-      dist/css/components/blog-teaser.css: {}
-blog-list-item:
-  css:
-    component:
-      dist/css/components/blog-list-item.css: {}
-pager:
-  css:
-    component:
-      dist/css/components/pager.css: {}
-form:
-  css:
-    component:
-      dist/css/components/form.css: {}
+    theme:
+      dist/css/admin/admin.css: { preprocess: false }

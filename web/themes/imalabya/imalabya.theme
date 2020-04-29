@@ -128,3 +128,18 @@ function imalabya_preprocess_views_view(&$variables) {
 function imalabya_preprocess_form(&$variables) {
   $variables['#attached']['library'][] = 'imalabya/form';
 }
+
+/**
+ * Implements template_preprocess_html().
+ */
+function imalabya_preprocess_html(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface && $node->bundle() === 'blog') {
+    $variables['blog'] = TRUE;
+    $variables['description'] = $node->body->summary;
+    $variables['title'] = $node->label();
+    $variables['image'] = \Drupal::request()->getSchemeAndHttpHost() . '/' . \Drupal::theme()->getActiveTheme()->getPath() . '/mugshot.jpg';
+    $variables['url'] = Url::fromRoute('entity.node.canonical', ['node' => $node->id()], ['asolute' => TRUE]);
+  }
+
+}

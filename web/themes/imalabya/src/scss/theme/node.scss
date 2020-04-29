@@ -1,6 +1,6 @@
 @import "../settings/colors";
 @import "../settings/variables";
-@import "../base/mixin";
+@import "../settings/mixin";
 .node {
   @include grid();
   > * {

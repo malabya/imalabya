@@ -25,23 +25,32 @@
 #}
 <!DOCTYPE html>
 <html{{ html_attributes }}>
-  <head>
-    <head-placeholder token="{{ placeholder_token|raw }}">
-    <title>{{ head_title|safe_join(' | ') }}</title>
-    <css-placeholder token="{{ placeholder_token|raw }}">
-    <js-placeholder token="{{ placeholder_token|raw }}">
-  </head>
-  <body{{ attributes }}>
-    {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-    <a href="#main-content" id="skip-link" aria-hidden="true">
-      {{ 'Skip to main content'|t }}
-    </a>
-    {{ page_top }}
-    {{ page }}
-    {{ page_bottom }}
-    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
-  </body>
+<head>
+<head-placeholder token="{{ placeholder_token|raw }}">
+<meta name="google-site-verification" content="TK0wDv8u8KSfhpr1q319EPjAQTY8doWGKTb1kpPvkrw" />
+<title>{{ head_title|safe_join(' | ') }}</title>
+{% if blog %}
+<meta name="description" content="{{ description|striptags }}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ title }}"/>
+<meta name="twitter:site" content="@malavya88"/>
+<meta name="twitter:description" content="{{ description|striptags }}" />
+<meta name="twitter:image" content="{{ image }}" />
+<meta name="og:url" content="{{ url }}" />
+<meta name="og:type" content="article" />
+<meta name="og:title" content="{{ title }}" />
+<meta name="og:locale" content="en_US" />
+<meta name="og:description" content="{{ description }}" />
+<meta name="og:image" content="{{ image }}" />
+{% endif %}
+<css-placeholder token="{{ placeholder_token|raw }}">
+<js-placeholder token="{{ placeholder_token|raw }}">
+</head>
+<body{{ attributes }}>
+  <a href="#main-content" id="skip-link" aria-hidden="true">{{ 'Skip to main content'|t }}</a>
+  {{ page_top }}
+  {{ page }}
+  {{ page_bottom }}
+  <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+</body>
 </html>
