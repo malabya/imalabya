@@ -17,21 +17,17 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: content
   field_topics:
-    weight: 102
+    weight: 1
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  links: true
