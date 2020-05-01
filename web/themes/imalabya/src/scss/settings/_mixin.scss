@@ -28,22 +28,30 @@
   margin: 0 auto $margin auto;
   padding-right: $space-m;
   padding-left: $space-m;
+  @media screen and (min-width: $screen-sm) {
+    padding-right: $space-xxl;
+    padding-left: $space-xxl;
+  }
+  @media screen and (min-width: $screen-lg) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 @mixin grid() {
   display: grid;
 
   grid-gap: $space-m;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  @media screen and (min-width: $screen-sm) {
+  @media screen and (min-width: $screen-lg) {
     grid-column-gap: $space-l;
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 }
 @mixin grid-content() {
   grid-column: 1 / 7;
-  @media screen and (min-width: $screen-sm) {
-    grid-column: 1 / 12;
-  }
+  // @media screen and (min-width: $screen-sm) {
+  //   grid-column: 1 / 9;
+  // }
   @media screen and (min-width: $screen-lg) {
     grid-column: 1 / 10;
   }
