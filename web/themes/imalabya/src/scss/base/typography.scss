@@ -96,9 +96,7 @@ ol {
 .align-center {
   height: auto;
   margin-top: $space-l;
-  margin-right: -$space-l;
   margin-bottom: $space-l;
-  margin-left: -$space-l;
   box-shadow: $box-shadow;
 }
 figure {
@@ -144,8 +142,4 @@ li > code {
   padding: 0 $space-xs;
   color: $color-dark-grey;
   background: $color-smoke;
-}
-li > .align-center {
-  margin-right: 0;
-  margin-left: 0;
 }

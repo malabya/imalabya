@@ -20,8 +20,10 @@
   }
   p {
     margin-bottom: $space;
+    text-align: center;
     @media screen and (min-width: $screen-sm) {
       margin: 0;
+      text-align: left;
     }
   }
   p > svg {

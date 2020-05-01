@@ -6,7 +6,10 @@ form {
   margin-top: $space-xl;
   margin-bottom: $space-xl;
   > * {
-    @include grid-content();
+    grid-column: 1 / span 6;
+    @media screen and (min-width: $screen-lg) {
+      grid-column: 1 / span 8;
+    }
   }
   > .form-item {
     margin-bottom: $space-s;
@@ -21,7 +24,9 @@ form {
 }
 input[type="text"],
 input[type="email"],
+input[type="password"],
 textarea {
+  width: 100%;
   padding: $space-s;
   border: 0.125rem solid $color-primary;
   font-size: $font-size;
