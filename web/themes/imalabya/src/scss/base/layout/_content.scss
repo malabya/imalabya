@@ -6,6 +6,8 @@ main {
   padding: $space-header-top-sm 0 $space-header-bottom;
   background: $color-header-bg;
   box-shadow: -50vw -1000vw 0 1000vw $color-header-bg;
+
+  grid-column: 1/-1;
   @media screen and (min-width: $screen-sm) {
     padding: $space-header-top 0 $space-header-bottom;
   }
