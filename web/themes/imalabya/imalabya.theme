@@ -27,6 +27,78 @@ function imalabya_page_attachments_alter(array &$page) {
 }
 
 /**
+ * Implements template_preprocess_html().
+ */
+function imalabya_preprocess_html(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface) {
+    $variables['node'] = TRUE;
+    $variables['description'] = $node->body->summary;
+    $variables['title'] = $node->label();
+    $variables['image'] = \Drupal::request()->getSchemeAndHttpHost() . '/' . \Drupal::theme()->getActiveTheme()->getPath() . '/mugshot.jpg';
+    $variables['url'] = Url::fromRoute('entity.node.canonical', ['node' => $node->id()], ['absolute' => TRUE]);
+
+    // Add structured data for Blog pages.
+    if ($node->bundle() == 'blog') {
+      $structured_data_json = [
+        '#type' => 'html_tag',
+        '#tag' => 'script',
+        '#attributes' => [
+          'type' => 'application/ld+json',
+        ],
+        '#value' => imalabya_get_structured_data_json($node),
+      ];
+      $variables['page']['#attached']['html_head'][] = [$structured_data_json, 'structured_data_json'];
+    }
+  }
+}
+
+/**
+ * Prepare the structured JSON data.
+ *
+ * @param mixed $node
+ *   The node object.
+ *
+ * @return string
+ *   The JSON string.
+ */
+function imalabya_get_structured_data_json($node) {
+  $schema = [];
+  if ($node instanceof NodeInterface && $node->bundle() === 'blog') {
+    $schema = [
+      '@context' => 'http://schema.org',
+      '@type' => 'BlogPosting',
+      'headline' => $node->label(),
+      'description' => $node->body->summary,
+      'author' => (object) [
+        '@type' => 'Person',
+        'name' => 'Malabya Tewari',
+      ],
+      'image' => (object) [
+        '@type' => 'ImageObject',
+        'url' => \Drupal::request()->getSchemeAndHttpHost() . '/' . \Drupal::theme()->getActiveTheme()->getPath() . '/mugshot.jpg',
+        'width' => '640',
+        'height' => '640',
+      ],
+      'datePublished' => \Drupal::service('date.formatter')->format($node->getCreatedTime(), 'html_datetime'),
+      'dateModified' => \Drupal::service('date.formatter')->format($node->getChangedTime(), 'html_datetime'),
+      'mainEntityOfPage' => Url::fromRoute('entity.node.canonical', ['node' => $node->id()], ['absolute' => TRUE])->toString(),
+      'publisher' => (object) [
+        '@type' => 'Person',
+        'name' => 'Malabya Tewari',
+        'url' => \Drupal::request()->getSchemeAndHttpHost() . '/about',
+        'sameAs' => array_values([
+          'https://twitter.com/malavya88',
+          'https://www.linkedin.com/in/malabyatewari/',
+          'https://www.drupal.org/u/imalabya',
+        ]),
+      ],
+    ];
+  }
+  return json_encode($schema, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+}
+
+/**
  * Implements template_theme_suggestions_page_alter().
  */
 function imalabya_theme_suggestions_page_alter(array &$suggestions, array $variables) {
@@ -127,19 +199,4 @@ function imalabya_preprocess_views_view(&$variables) {
  */
 function imalabya_preprocess_form(&$variables) {
   $variables['#attached']['library'][] = 'imalabya/form';
-}
-
-/**
- * Implements template_preprocess_html().
- */
-function imalabya_preprocess_html(&$variables) {
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if ($node instanceof NodeInterface && $node->bundle() === 'blog') {
-    $variables['blog'] = TRUE;
-    $variables['description'] = $node->body->summary;
-    $variables['title'] = $node->label();
-    $variables['image'] = \Drupal::request()->getSchemeAndHttpHost() . '/' . \Drupal::theme()->getActiveTheme()->getPath() . '/mugshot.jpg';
-    $variables['url'] = Url::fromRoute('entity.node.canonical', ['node' => $node->id()], ['asolute' => TRUE]);
-  }
-
 }

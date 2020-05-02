@@ -26,10 +26,9 @@
 <!DOCTYPE html>
 <html{{ html_attributes }}>
 <head>
-<head-placeholder token="{{ placeholder_token|raw }}">
 <meta name="google-site-verification" content="cgJfnVzLcr9J3oIVWw3sKktg9vO7YMZgz7Zyq4PL00A" />
 <title>{{ head_title|safe_join(' | ') }}</title>
-{% if blog %}
+{% if node %}
 <meta name="description" content="{{ description|striptags }}" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{{ title }}"/>
@@ -43,6 +42,7 @@
 <meta name="og:description" content="{{ description }}" />
 <meta name="og:image" content="{{ image }}" />
 {% endif %}
+<head-placeholder token="{{ placeholder_token|raw }}">
 <css-placeholder token="{{ placeholder_token|raw }}">
 <js-placeholder token="{{ placeholder_token|raw }}">
 </head>
