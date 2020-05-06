@@ -1,7 +1,7 @@
 {
   "name": "imalabya",
   "version": "1.0.0",
-  "description": "",
+  "description": "Theme for https://imalabya.co",
   "main": "Gulpfile.js",
   "scripts": {
     "watch": "gulp",
@@ -9,6 +9,10 @@
     "build": "gulp build --production",
     "prepare": "node_modules/csscomb/bin/csscomb src/scss",
     "eslint": "../../../../../core/node_modules/.bin/eslint src/libs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/malabya/imalabya"
   },
   "author": "Malabya",
   "license": "ISC",
@@ -30,6 +34,7 @@
     "babel-preset-env": "^1.7.0",
     "gulp-babel": "^8.0.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^2.0.0"
+    "gulp-rename": "^2.0.0",
+    "react": "^16.13.1"
   }
 }
