@@ -16,25 +16,24 @@
   },
   "author": "Malabya",
   "license": "ISC",
-  "dependencies": {
-    "csscomb": "^4.3.0",
-    "gulp": "4",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-csscomb": "^3.1.0",
-    "gulp-mode": "^1.0.2",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
-    "prismjs": "^1.20.0",
-    "quicklink": "^2.0.0-alpha"
-  },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "babel-preset-env": "^1.7.0",
+    "csscomb": "^4.3.0",
+    "gulp": "4",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-mode": "^1.0.2",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
-    "react": "^16.13.1"
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "prismjs": "^1.20.0",
+    "quicklink": "^2.0.0-alpha",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

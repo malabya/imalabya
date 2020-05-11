@@ -1,6 +1,5 @@
 # Global style
 global-styling:
-  weight: -10
   css:
     base:
       //fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,800;1,400;1,800&family=Poppins:wght@400;500;700: {}
@@ -50,7 +49,6 @@ exception:
     theme:
       dist/css/theme/exception.css: {}
 blog:
-  weight: 10
   css:
     theme:
       dist/css/theme/blog.css: {}
@@ -59,7 +57,8 @@ blog:
 prism:
   css:
     theme:
-      node_modules/prismjs/themes/prism-tomorrow.css: { weight: -50 }
+      node_modules/prismjs/themes/prism-tomorrow.css: {}
+      dist/css/theme/preformatted.css: {}
   js:
     node_modules/prismjs/prism.js: {}
     node_modules/prismjs/components/prism-clike.min.js: {}
@@ -68,6 +67,9 @@ prism:
     node_modules/prismjs/components/prism-phpdoc.min.js: {}
     node_modules/prismjs/components/prism-php-extras.min.js: {}
     node_modules/prismjs/components/prism-php.min.js: {}
+    node_modules/prismjs/components/prism-bash.min.js: {}
+    node_modules/prismjs/components/prism-yaml.min.js: {}
+
 # Admin styles
 admin:
   css:

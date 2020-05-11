@@ -4,6 +4,11 @@
   margin-right: 0;
 }
 main {
-  padding-top: $space-header-top;
-  padding-bottom: $space-header-bottom;
+  @media screen and (min-width: $screen-sm) {
+    padding-top: $space-header-top;
+    padding-bottom: $space-header-bottom;
+  }
+}
+.node__content {
+  overflow: hidden;
 }

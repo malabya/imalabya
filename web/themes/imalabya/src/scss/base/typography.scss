@@ -125,18 +125,6 @@ blockquote {
     font-size: $font-size--xl;
   }
 }
-pre[class*="language-"] {
-  margin-top: $space-xl;
-  margin-bottom: $space-xl;
-  padding: 0 $space-xl $space;
-  line-height: $line-height--l;
-  @media screen and (min-width: $screen-lg) {
-    margin-right: $box-space;
-  }
-  > code {
-    line-height: $line-height--l;
-  }
-}
 p > code,
 li > code {
   padding: 0 $space-xs;
