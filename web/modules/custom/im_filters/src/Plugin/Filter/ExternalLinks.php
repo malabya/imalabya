@@ -33,7 +33,7 @@ class ExternalLinks extends FilterBase {
       $url = $element->getAttribute('href');
       if (UrlHelper::isExternal($url)) {
         $element->setAttribute('target', '_blank');
-        $element->setAttribute('rel', 'nofollow');
+        $element->setAttribute('rel', 'nofollow noopener');
       }
     }
 

@@ -67,7 +67,7 @@ function imalabya_get_structured_data_json($node) {
   if ($node instanceof NodeInterface && $node->bundle() === 'blog') {
     $schema = [
       '@context' => 'http://schema.org',
-      '@type' => 'BlogPosting',
+      '@type' => 'NewsArticle',
       'headline' => $node->label(),
       'description' => $node->body->summary,
       'author' => (object) [
