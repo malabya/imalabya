@@ -2,7 +2,7 @@
 global-styling:
   css:
     base:
-      //fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,800;1,400;1,800&family=Poppins:wght@400;500;700: {}
+      //fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,800;1,400;1,800&family=Poppins:wght@400;500;700&display=swap: {}
       dist/css/base/base.css: {}
       dist/css/base/typography.css: {}
     layout:
