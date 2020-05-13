@@ -1,6 +1,4 @@
-@import "../settings/colors";
-@import "../settings/variables";
-@import "../settings/mixin";
+@import "../settings/settings";
 .pager {
   @include grid();
   margin-bottom: $space-xl;

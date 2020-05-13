@@ -1,6 +1,4 @@
-@import "../settings/colors";
-@import "../settings/variables";
-@import "../settings/mixin";
+@import "../settings/settings";
 pre[class*="language-"] {
   margin-top: -$space;
   margin-bottom: $space-xl;

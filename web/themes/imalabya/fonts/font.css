@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Alegreya";
+  src: url("alegreya/Alegreya-Regular.woff") format("woff"),
+  url("alegreya/fonts/Alegreya-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alegreya";
+  src: url("alegreya/Alegreya-Italic.woff") format("woff"), url("alegreya/Alegreya-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Alegreya";
+  src: url("alegreya/fonts/Alegreya-ExtraBold.woff") format("woff"),
+  url("alegreya/fonts/Alegreya-ExtraBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alegreya";
+  src: url("alegreya/Alegreya-ExtraBoldItalic.woff") format("woff"),
+  url("alegreya/Alegreya-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("poppins/Poppins-Regular.woff") format("woff"), url("poppins/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("poppins/Poppins-Medium.woff") format("woff"), url("poppins/Poppins-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("poppins/Poppins-Bold.woff") format("woff"), url("poppins/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,6 +1,4 @@
-@import "../settings/colors";
-@import "../settings/variables";
-@import "../settings/mixin";
+@import "../settings/settings";
 .dialog-off-canvas-main-canvas {
   position: relative;
 }
@@ -14,7 +12,6 @@ body {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
-
   -webkit-font-smoothing: antialiased;
 }
 * {

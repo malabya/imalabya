@@ -1,5 +1,7 @@
 <header id="header">
-	{{ page.branding }}
+	<a href="{{ path('<front>') }}" rel="home" title="Home" class="site-logo">
+		{% include "@imalabya/svg/logo.html.twig" %}
+	</a>
 	{{ page.navigation }}
 </header>
 {% block content %}
