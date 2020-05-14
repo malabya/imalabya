@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * @file
+ * Module file for sitemap.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url;
+
+/**
+ * Get the Last-Modified header response.
+ *
+ * @param string $url
+ *   The URL to process.
+ */
+function get_last_modified($url) {
+  try {
+    $request = \Drupal::httpClient()->get($url);
+    $headers = $request->getHeader('Last-Modified');
+    $modified_time = \Drupal::service('date.formatter')->format(strtotime(reset($headers)), 'html_datetime', 'GMT');
+    return $modified_time;
+  }
+  catch (Exception $e) {
+    \Drupal::logger('sitemap')->error($e->getMessage());
+    return \Drupal::service('date.formatter')->format(time());
+  }
+
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function im_sitemap_entity_insert(EntityInterface $entity) {
+  entity_type_switch_case($entity, 'insert');
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function im_sitemap_entity_update(EntityInterface $entity) {
+  entity_type_switch_case($entity, 'update');
+}
+
+/**
+ * Helper method for switch case.
+ *
+ * @param mixed $entity
+ *   The entity.
+ */
+function entity_type_switch_case($entity, $op) {
+  switch ($entity->getEntityType()->id()) {
+    case 'node':
+      insert_into_sitemap($entity->id(), $entity->getEntityType()->id(), "1.0", $op);
+      break;
+
+    case 'taxonomy_term':
+      insert_into_sitemap($entity->id(), $entity->getEntityType()->id(), "0.8", $op);
+      break;
+  }
+}
+
+/**
+ * Helper function to insert data into sitemap table for entities.
+ *
+ * @param int $id
+ *   The entity ID.
+ * @param string $entity_type
+ *   The entity type.
+ * @param string $priority
+ *   The priority of the entry.
+ */
+function insert_into_sitemap($id, $entity_type, $priority, $op = 'insert') {
+  // Initialize the database connection.
+  $database = \Drupal::database();
+
+  // Hard code the site URL.
+  // @todo find a better way.
+  $site_url = 'https://imalabya.co';
+
+  $url = $site_url . Url::fromRoute('entity.' . $entity_type . '.canonical', ['' . $entity_type . '' => $id])->toString();
+  $modified_time = get_last_modified($url);
+  $fields = [
+    'entity_type' => $entity_type,
+    'entity_id' => $id,
+    'loc' => $url,
+    'lastmod' => $modified_time,
+    'priority' => $priority,
+  ];
+  if ($op == 'insert') {
+    $database->insert('sitemap')->fields($fields)->execute();
+  }
+  else {
+    $database->update('sitemap')->fields($fields)->condition('entity_type', $entity_type)->condition('entity_id', $id)->execute();
+  }
+
+}

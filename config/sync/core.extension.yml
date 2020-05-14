@@ -14,6 +14,7 @@ module:
   im_contact: 0
   im_filters: 0
   im_prevnext: 0
+  im_sitemap: 0
   image: 0
   link: 0
   menu_link_content: 0

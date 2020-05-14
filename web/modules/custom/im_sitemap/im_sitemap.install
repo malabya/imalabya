@@ -1,0 +1,116 @@
+<?php
+
+/**
+ * @file
+ * Setup sitemap table.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function im_sitemap_schema() {
+  $schema['sitemap'] = [
+    'description' => 'Contains sitemap XML for all pages.',
+    'fields' => [
+      'id' => [
+        'description' => 'Sitemap ID.',
+        'type' => 'serial',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+      ],
+      'entity_type' => [
+        'description' => 'Entity type',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => FALSE,
+      ],
+      'entity_id' => [
+        'description' => 'Entity ID',
+        'type' => 'int',
+        'not null' => FALSE,
+      ],
+      'loc' => [
+        'description' => 'The location URL of a document',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'lastmod' => [
+        'description' => 'Last modified date of the document',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ],
+      'priority' => [
+        'description' => 'Sitemap priority.',
+        'type' => 'varchar',
+        'length' => 5,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function im_sitemap_install() {
+  // Hard code the site URL.
+  // @todo find a better way.
+  $site_url = 'https://imalabya.co';
+
+  // Initialize the database connection.
+  $database = \Drupal::database();
+
+  // Insert the homepage.
+  $database->insert('sitemap')->fields([
+    'entity_type' => 'node',
+    'entity_id' => 1,
+    'loc' => $site_url,
+    'lastmod' => get_last_modified($site_url),
+    'priority' => '1.0',
+  ])->execute();
+
+  // Insert the about page.
+  $database->insert('sitemap')->fields([
+    'entity_type' => 'node',
+    'entity_id' => 9,
+    'loc' => $site_url . '/about',
+    'lastmod' => get_last_modified($site_url . '/about'),
+    'priority' => '0.8',
+  ])->execute();
+
+  // Insert the contact page.
+  $database->insert('sitemap')->fields([
+    'entity_type' => 'node',
+    'entity_id' => 11,
+    'loc' => $site_url . '/contact',
+    'lastmod' => get_last_modified($site_url . '/contact'),
+    'priority' => '0.5',
+  ])->execute();
+
+  // Insert the blog listing page.
+  $database->insert('sitemap')->fields([
+    'loc' => $site_url . '/blog',
+    'lastmod' => get_last_modified($site_url . '/blog'),
+    'priority' => '0.8',
+  ])->execute();
+
+  // Insert the existing topics.
+  $terms = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->loadTree('topic');
+  foreach ($terms as $term) {
+    insert_into_sitemap($term->tid, 'taxonomy_term', '0.8');
+  }
+
+  // Inseert the existing nodes.
+  $nids = \Drupal::entityQuery('node')->condition('type', 'blog')->execute();
+  foreach ($nids as $nid) {
+    insert_into_sitemap($nid, 'node', '1.0');
+  }
+
+}

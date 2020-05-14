@@ -1,0 +1,5 @@
+name: 'Sitemap'
+type: module
+description: 'Generates a sitemap for the site.'
+package: 'Custom'
+core_version_requirement: ^8|^9

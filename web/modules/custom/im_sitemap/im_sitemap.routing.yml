@@ -1,0 +1,8 @@
+
+im_sitemap.sitemap_controller_sitemap:
+  path: '/sitemap.xml'
+  defaults:
+    _controller: '\Drupal\im_sitemap\Controller\SitemapController::sitemap'
+    _title: 'Sitemap'
+  requirements:
+    _permission: 'access content'
