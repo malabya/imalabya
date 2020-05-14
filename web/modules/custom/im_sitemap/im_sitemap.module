@@ -18,7 +18,7 @@ function get_last_modified($url) {
   try {
     $request = \Drupal::httpClient()->get($url);
     $headers = $request->getHeader('Last-Modified');
-    $modified_time = \Drupal::service('date.formatter')->format(strtotime(reset($headers)), 'html_datetime', 'GMT');
+    $modified_time = \Drupal::service('date.formatter')->format(strtotime(reset($headers)), 'html_date', 'GMT');
     return $modified_time;
   }
   catch (Exception $e) {
