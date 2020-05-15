@@ -1,0 +1,42 @@
+name: Build & lint project
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+      - name: Install composer dependencies
+        run: composer install --prefer-dist --no-progress -vvv
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+      - name: Install frontend dependencies
+        run: cd web/themes/imalabya && yarn install
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install composer dependencies
+        run: composer install --prefer-dist --no-progress -vvv
+      - name: Run PHPCS with Drupal on modules
+        uses: docker://hussainweb/drupalqa:php7.4
+        with:
+          args: phpcs --standard=Drupal web/modules/custom
+      - name: Run PHPCS with DrupalPractice on modules
+        uses: docker://hussainweb/drupalqa:php7.4
+        with:
+          args: phpcs --standard=DrupalPractice web/modules/custom
+      - name: Run PHPCS with Drupal on theme
+        uses: docker://hussainweb/drupalqa:php7.4
+        with:
+          args: phpcs --standard=Drupal web/themes --extensions=js,theme,yml --ignore=web/themes/*/dist/,web/themes/*/Gulpfile.js,web/themes/*/node_modules/
+      - name: Run PHPCS with DrupalPractice on theme
+        uses: docker://hussainweb/drupalqa:php7.4
+        with:
+          args: phpcs --standard=DrupalPractice web/themes --extensions=js,theme,yml --ignore=web/themes/*/dist/,web/themes/*/Gulpfile.js,web/themes/*/node_modules/
