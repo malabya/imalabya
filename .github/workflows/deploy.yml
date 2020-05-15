@@ -14,4 +14,4 @@ jobs:
         debug: true
         script: |
           cd ${{ secrets.DOCROOT }}
-          composer install
+          robo job:drupal-update
