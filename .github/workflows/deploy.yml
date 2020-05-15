@@ -11,6 +11,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
+        debug: true
         script: |
           whoami
           cd ${{ secrets.DOCROOT }}
