@@ -1,8 +1,8 @@
 name: Deploy to Digital Ocean droplet
 on: [push]
 jobs:
-  build:
-    name: Build
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
@@ -11,5 +11,4 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
         script: docroot & ls
