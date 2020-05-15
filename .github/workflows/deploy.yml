@@ -5,8 +5,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: executing remote ssh commands using password
+    - name: Deploy to droplet using SSH
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
@@ -14,6 +13,5 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         debug: true
         script: |
-          whoami
           cd ${{ secrets.DOCROOT }}
           composer install
