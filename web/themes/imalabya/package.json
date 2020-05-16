@@ -37,6 +37,9 @@
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
     "prettier": "^2.0.5",
+    "quicklink": "^2.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.17.2"
