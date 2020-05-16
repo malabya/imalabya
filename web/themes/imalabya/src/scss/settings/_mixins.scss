@@ -14,49 +14,55 @@
 
 // Clearfix
 @mixin clearfix() {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: table;
     content: "";
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }
+
 @mixin container($margin: $space-l) {
   max-width: $container;
   margin: 0 auto $margin auto;
   padding-right: $space-m;
   padding-left: $space-m;
+
   @media screen and (min-width: $screen-sm) {
     padding-right: $space-xxl;
     padding-left: $space-xxl;
   }
+
   @media screen and (min-width: $screen-lg) {
     padding-right: 0;
     padding-left: 0;
   }
 }
+
 @mixin grid() {
   display: grid;
-
-  grid-gap: $space-m;
   grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-gap: $space-m;
+
   @media screen and (min-width: $screen-lg) {
-    grid-column-gap: $space-l;
     grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-column-gap: $space-l;
   }
 }
+
 @mixin grid-content() {
   grid-column: 1 / 7;
-  // @media screen and (min-width: $screen-sm) {
-  //   grid-column: 1 / 9;
-  // }
+
   @media screen and (min-width: $screen-lg) {
     grid-column: 1 / 10;
   }
 }
+
 @mixin button {
+  -webkit-appearance: none;
   display: inline-block;
   margin: $space 0;
   padding: $space-s $space;
@@ -70,7 +76,6 @@
   font-size: $font-size--s;
   font-weight: $font-weight--medium;
 
-  -webkit-appearance: none;
   &:hover {
     cursor: pointer;
     background: $color-link--hover-bg;

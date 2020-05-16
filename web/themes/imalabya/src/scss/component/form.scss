@@ -1,13 +1,18 @@
 @import "../settings/settings";
+
 form {
   @include grid();
+
   margin-top: $space-xl;
   margin-bottom: $space-xl;
+
   > * {
     grid-column: 1 / span 6;
   }
+
   > .form-item {
     margin-bottom: $space-s;
+
     label {
       display: block;
       margin-bottom: $space-xs;
@@ -17,6 +22,7 @@ form {
     }
   }
 }
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -26,6 +32,7 @@ textarea {
   border: 0.125rem solid $color-primary;
   font-size: $font-size;
 }
+
 input[type="submit"],
 input[type="button"],
 button {

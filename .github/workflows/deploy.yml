@@ -2,7 +2,6 @@ name: Deploy to Digital Ocean droplet
 on: [push]
 jobs:
   deploy:
-    name: Deploy
     runs-on: ubuntu-latest
     steps:
     - name: Deploy to droplet using SSH

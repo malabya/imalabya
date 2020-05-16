@@ -1,7 +1,9 @@
 @import "../settings/settings";
+
 .dialog-off-canvas-main-canvas {
   position: relative;
 }
+
 body {
   position: relative;
   display: block;
@@ -14,13 +16,16 @@ body {
   line-height: $line-height;
   -webkit-font-smoothing: antialiased;
 }
+
 * {
   box-sizing: border-box;
+
   &:focus {
     outline-width: 0.0625rem;
     outline-offset: 0.125rem;
   }
 }
+
 #skip-link {
   position: absolute !important;
   z-index: -10;
@@ -29,6 +34,7 @@ body {
   width: 1px;
   height: 1px;
   word-wrap: normal;
+
   &:focus,
   &:active {
     z-index: 100;
@@ -38,6 +44,7 @@ body {
     height: auto;
   }
 }
+
 label {
   margin-right: $space-s;
   text-transform: uppercase;
@@ -45,9 +52,11 @@ label {
   font-size: $font-size--xs;
   font-weight: $font-weight--bold;
 }
+
 .more-link {
   @include button();
 }
+
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -56,6 +65,7 @@ label {
   height: 1px;
   word-wrap: normal;
 }
+
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
   position: static !important;

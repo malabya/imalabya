@@ -1,26 +1,32 @@
 @import "../settings/settings";
+
 .pager {
   @include grid();
+
   margin-bottom: $space-xl;
 }
-.pager__items {
-  @include  no-bullet();
-  display: flex;
 
+.pager__items {
+  @include no-bullet();
+
+  display: flex;
   grid-column: 1/-1;
+
   @media screen and (min-width: $screen-sm) {
     grid-column: 2/7;
   }
-  @media screen and (min-width: $screen-lg) {
-    margin-left: -1.25rem;
 
+  @media screen and (min-width: $screen-lg) {
     grid-column: 3/11;
+    margin-left: -1.25rem;
   }
 }
+
 .pager__item {
   display: inline-block;
   margin: 0 $space-xs;
   vertical-align: top;
+
   a {
     display: inline-block;
     min-width: 2rem;
@@ -34,19 +40,23 @@
     font-size: $font-size;
     font-weight: $font-weight--bold;
     line-height: 2rem;
+
     &:hover {
       color: $color-white;
       background: $color-primary;
     }
   }
 }
+
 .pager__item--ellipsis {
   display: none;
   line-height: 1;
+
   @media screen and (min-width: $screen-sm) {
     display: inline-block;
   }
 }
+
 .pager__item--first a:hover,
 .pager__item--previous a:hover,
 .pager__item--next a:hover,

@@ -3,8 +3,10 @@
   z-index: 100;
   top: $space-header-top;
   left: 0;
+
   ul {
     @include no-bullet();
+
     > li a {
       padding: $space;
       font-family: $font-primary;

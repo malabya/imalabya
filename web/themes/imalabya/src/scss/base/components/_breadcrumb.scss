@@ -1,17 +1,21 @@
 .breadcrumb {
   @include no-bullet();
+
   display: flex;
   flex-flow: row wrap;
+
   > * {
     font-family: $font-primary;
     font-size: $font-size--s;
   }
+
   > li {
-    &:after {
+    &::after {
       margin: $space-xs;
       content: "\000BB";
     }
-    &:last-child:after {
+
+    &:last-child::after {
       content: "";
     }
   }

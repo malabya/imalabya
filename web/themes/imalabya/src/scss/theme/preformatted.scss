@@ -1,8 +1,10 @@
 @import "../settings/settings";
+
 pre[class*="language-"] {
   margin-top: -$space;
   margin-bottom: $space-xl;
   padding: 0 $space-xl $space-l;
+
   > code {
     line-height: $line-height--l;
   }

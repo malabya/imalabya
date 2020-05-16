@@ -1,5 +1,6 @@
 @import "../settings/settings";
 @import "../base/typography";
+
 p,
 ul,
 li,
@@ -14,11 +15,13 @@ figure {
   margin-right: auto;
   margin-left: auto;
 }
+
 .align-right {
   > img {
     max-width: 100%;
   }
 }
+
 pre[class*="language-"] {
   width: auto;
   margin-top: auto;
@@ -27,6 +30,7 @@ pre[class*="language-"] {
   padding: initial;
   line-height: inherit;
 }
+
 .cke_editable pre {
   width: $ckeditor-container !important;
   margin-top: $space-text;
