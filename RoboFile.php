@@ -23,6 +23,7 @@ class RoboFile extends \Robo\Tasks
         $collection->addTask($this->runDbUpdates());
         $collection->addTask($this->runConfigImport());
         $collection->addTask($this->runBuildFrontEnd());
+        $collection->addTask($this->runClearRebuild());
         return $collection->run();
     }
 
@@ -56,9 +57,9 @@ class RoboFile extends \Robo\Tasks
      * @return \Robo\Task\Base\Exec
      *   A task to run db updates.
      */
-    protected function runClearCache() {
+    protected function runClearRebuild() {
       return $this->drush()
-      ->arg('clear-cache');
+      ->arg('cache-rebuild');
     }
 
     /**
