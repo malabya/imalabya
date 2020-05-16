@@ -1,5 +1,6 @@
 #footer {
   @include container();
+
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -9,45 +10,56 @@
   padding-bottom: $space-l;
   color: $color-dark-grey;
   border-top: $border-light;
+
   @media screen and (min-width: $screen-sm) {
     justify-content: space-between;
   }
+
   > * {
     margin: 0;
     font-family: $font-primary;
     font-size: $font-size--s;
     font-weight: $font-weight--medium;
   }
+
   p {
     margin-bottom: $space;
     text-align: center;
+
     @media screen and (min-width: $screen-sm) {
       margin: 0;
       text-align: left;
     }
   }
+
   p > svg {
     display: inline-block;
     vertical-align: middle;
   }
 }
+
 #social > a {
   display: inline-block;
   width: auto;
   margin-right: $space;
   margin-bottom: 0;
   text-decoration: none;
+
   &:last-child {
     margin-right: 0;
   }
+
   > svg {
     vertical-align: middle;
+
     path {
       transition: $transition-time fill ease-in-out;
     }
   }
+
   &:hover {
     background: none;
+
     > svg path {
       fill: $color-primary;
     }

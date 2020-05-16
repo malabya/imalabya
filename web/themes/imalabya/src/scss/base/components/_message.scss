@@ -1,17 +1,22 @@
 .messages {
   @include container();
+
   padding-right: 0;
   padding-left: 0;
+
   > div {
     margin-bottom: $space-xl;
     padding: $space;
   }
+
   .status {
     background: $success;
   }
+
   .warning {
     background: $warning;
   }
+
   .error {
     background: $danger;
   }

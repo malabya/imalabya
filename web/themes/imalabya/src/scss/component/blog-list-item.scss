@@ -1,48 +1,63 @@
 @import "../settings/_settings.scss";
+
 .l-feed {
   @include grid();
   @include no-bullet();
+
   margin-top: $space-xl;
+
   > h2 {
     grid-column: 1/-1;
   }
+
   > aside {
     grid-column: 1/7;
+
     @media screen and (min-width: $screen-sm) {
-      grid-column: 10/13;
       grid-row: 1/span 5;
+      grid-column: 10/13;
     }
   }
 }
+
 .l-entry {
   @include grid-content();
+
   margin-bottom: $space-l;
   font-family: $font-primary;
+
   > h3 {
     margin: $space-s 0;
     font-size: $font-size--m;
+
     a {
       color: $color-primary;
     }
   }
 }
+
 .l-header {
   color: $color-dark-grey;
   font-size: $font-size--s;
+
   span {
     margin: 0 0.5rem 0 0.25rem;
     letter-spacing: -0.5rem;
   }
 }
+
 #browse-topic {
   margin-bottom: $space;
+
   .container {
     padding: $space;
     border: 0.125rem solid $color-primary;
     background: $color-header-bg;
+
     > h2 {
       margin-top: 0;
     }
+
     ul {
       @include no-bullet();
     }

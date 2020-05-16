@@ -1,24 +1,27 @@
 @import "../settings/settings";
+
 #prevnext {
   @include no-bullet();
   @include grid();
+
   margin-top: $space-xxl;
   margin-bottom: $space-l;
+
   > li {
     position: relative;
+    grid-column: 1 / -1;
     padding: $space-s;
     border: $border;
 
-    grid-column: 1 / -1;
     @media screen and (min-width: $screen-sm) {
-      text-align: right;
-
       grid-column: 7 / span 6;
+      text-align: right;
     }
+
     &:first-child {
+      grid-column: 1 / -1;
       text-align: left;
 
-      grid-column: 1 / -1;
       @media screen and (min-width: $screen-sm) {
         grid-column: 1 / span 6;
       }

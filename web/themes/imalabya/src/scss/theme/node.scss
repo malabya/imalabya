@@ -1,6 +1,8 @@
 @import "../settings/settings";
+
 .node {
   @include grid();
+
   > * {
     @include grid-content();
   }

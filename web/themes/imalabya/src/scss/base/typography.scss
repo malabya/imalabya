@@ -1,5 +1,5 @@
-@import "../settings/colors";
-@import "../settings/variables";
+@import "../settings/settings";
+
 h1,
 h2,
 h3,
@@ -12,16 +12,20 @@ h6 {
   font-weight: $font-weight--bold;
   line-height: $line-height;
 }
+
 h1 {
   margin: 0;
   font-size: $font-size--xl;
+
   @media screen and (min-width: $screen-sm) {
     font-size: $font-size--xxl;
-  };
+  }
+
   @media screen and (min-width: $screen-lg) {
     font-size: $font-size--xxxl;
   }
 }
+
 h2 {
   margin-top: $space-xxl;
   margin-bottom: $space;
@@ -29,59 +33,84 @@ h2 {
   color: $color-secondary;
   font-size: $font-size;
 }
+
 h3 {
   margin-top: $space-xxl;
   margin-bottom: $space-m;
   font-size: $font-size--l;
 }
+
 h4 {
   margin-bottom: $space-s;
   font-size: $font-size--m;
 }
+
 h5 {
   margin: 0;
   text-transform: uppercase;
   font-size: $font-size--s;
 }
+
 a {
   transition: background $transition-time linear, color $transition-time linear;
   vertical-align: baseline;
   text-decoration: underline;
   color: $color-link;
   background: transparent;
+
   &:hover,
   &:focus {
     color: $color-link--hover;
     background: $color-link--hover-bg;
   }
 }
+
 p {
   margin: 0 auto $space-text auto;
   font-family: $font-secondary;
   font-size: $font-size--text;
   line-height: $line-height--l;
-  &:last-child {
-    margin-bottom: 0;
+}
+
+blockquote {
+  margin: $space-text 0;
+  padding: $space-l;
+  border-left: 0.5rem solid $color-secondary;
+  background: $color-smoke;
+  font-style: italic;
+
+  @media screen and (min-width: $screen-lg) {
+    margin-right: $box-space;
+  }
+
+  > p {
+    font-size: $font-size--xl;
   }
 }
+
 strong {
   font-weight: $font-weight--bold;
 }
+
 em {
   font-style: italic;
 }
+
 ul,
 ol {
   margin-bottom: $space-text;
   font-family: $font-secondary;
   font-size: $font-size--text;
+
   > li {
     margin-bottom: $space-s;
   }
 }
+
 .align-right {
   height: auto;
   margin: $space-l 0;
+
   @media screen and (min-width: $screen-sm) {
     float: right;
     max-width: $box;
@@ -89,22 +118,27 @@ ol {
     margin-bottom: $space-s;
     margin-left: $space;
   }
+
   @media screen and (min-width: $screen-lg) {
     margin-right: $box-space;
   }
 }
+
 .align-center {
   height: auto;
   margin-top: $space-l;
   margin-bottom: $space-l;
   box-shadow: $box-shadow;
 }
+
 figure {
   margin: 0;
   background: $color-smoke;
+
   > img {
     width: 100%;
   }
+
   figcaption {
     padding: $space-s;
     font-family: $font-secondary;
@@ -112,19 +146,7 @@ figure {
     font-style: italic;
   }
 }
-blockquote {
-  margin: $space-text 0;
-  padding: $space-l;
-  border-left: 0.5rem solid $color-secondary;
-  background: $color-smoke;
-  font-style: italic;
-  @media screen and (min-width: $screen-lg) {
-    margin-right: $box-space;
-  }
-  > p {
-    font-size: $font-size--xl;
-  }
-}
+
 p > code,
 li > code {
   padding: 0 $space-xs;
