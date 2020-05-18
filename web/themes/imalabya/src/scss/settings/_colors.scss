@@ -9,6 +9,7 @@ $color-link: $color-secondary;
 $color-link--hover: $color-primary;
 $color-link--hover-bg: transparentize($color-link, 0.85);
 $color-header-bg: transparentize($color-secondary, 0.95);
+$color-info-box-bg: transparentize($color-secondary, 0.90);
 $success: transparentize(#26a769, 0.9);
 $danger: transparentize(#d72222, 0.9);
 $warning: transparentize(#ffd23f, 0.9);

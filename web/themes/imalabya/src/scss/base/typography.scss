@@ -153,3 +153,10 @@ li > code {
   color: $color-dark-grey;
   background: $color-smoke;
 }
+
+.info-box {
+  padding: $space;
+  padding-left: $space-l;
+  border-left: 0.25rem solid $color-primary;
+  background: $color-info-box-bg;
+}
