@@ -224,6 +224,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      title: 'iMalabya blog'
     cache_metadata:
       max-age: -1
       contexts:
@@ -245,6 +246,12 @@ display:
         type: node_rss
         options: {  }
       path: planet.xml
+      sitename_title: true
+      style:
+        type: rss
+        options:
+          uses_fields: false
+          description: 'Recent blog posts on imalabya.co on Drupal'
     cache_metadata:
       max-age: -1
       contexts:
