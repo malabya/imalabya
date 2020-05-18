@@ -98,12 +98,23 @@ em {
 
 ul,
 ol {
-  margin-bottom: $space-text;
+  margin: $space-text 0;
+  padding-left: $space-m;
   font-family: $font-secondary;
   font-size: $font-size--text;
 
   > li {
-    margin-bottom: $space-s;
+    margin-bottom: $space;
+    line-height: $line-height--l;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  ul,
+  ol {
+    margin: $space;
   }
 }
 

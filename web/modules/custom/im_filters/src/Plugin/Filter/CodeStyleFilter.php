@@ -27,13 +27,11 @@ class CodeStyleFilter extends FilterBase {
     if ($elements->length === 0) {
       return new FilterProcessResult(Html::serialize($dom));
     }
-
     foreach ($elements as $element) {
       $content = $element->textContent;
       $class = $element->getAttribute('class');
-
       // Create the elements.
-      $code = $dom->createElement('code', $content);
+      $code = $dom->createElement('code', htmlentities($content));
       $pre = $dom->createElement('pre');
 
       // Set attributes.
