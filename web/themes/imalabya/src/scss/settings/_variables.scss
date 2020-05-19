@@ -1,23 +1,22 @@
 // Font and text setting.
-$font-primary: "Poppins", sans-serif;
-$font-secondary: "Alegreya", serif;
-$font-weight: 400;
-$font-weight--medium: 500;
-$font-weight--bold: 700;
+$font-primary: Avenir Next, AvenirNext, Avenir, "Segoe UI", "SegoeUI", Franklin Gothic, Roboto, Ubuntu, sans-serif;
+$font-secondary: Georgia, Times, Times New Roman, serif;
+$font-weight: normal;
+$font-weight--bold: bold;
 $font-size--xs: 0.75rem;
 $font-size--s: 0.875rem;
 $font-size: 1.0625rem;
 $font-size--m: 1.35rem;
 $font-size--l: 1.75rem;
-$font-size--xl: 2rem;
+$font-size--xl: 2.25rem;
 $font-size--xxl: 3rem;
 $font-size--xxxl: 4rem;
-$font-size--text: 1.25rem;
+$font-size--text: 1.185rem;
 $font-size--blockquote: 1.35rem;
 $font-size--menu: 1rem;
 $line-height--s: 1;
 $line-height: 1.25;
-$line-height--l: 1.8;
+$line-height--l: 1.85;
 // Container and breakpoints.
 $container: 65rem;
 $ckeditor-container: 42rem;

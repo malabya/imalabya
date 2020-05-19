@@ -11,7 +11,7 @@
 
   > li {
     &::after {
-      margin: $space-xs;
+      margin-right: $space-xs;
       content: "\000BB";
     }
 

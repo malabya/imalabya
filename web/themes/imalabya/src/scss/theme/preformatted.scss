@@ -3,9 +3,17 @@
 pre[class*="language-"] {
   margin-top: -$space;
   margin-bottom: $space-xl;
-  padding: 0 $space-xl $space-l;
+  padding: 0 $space $space-l;
+  @media screen and (min-width: $screen-lg) {
+    padding: 0 $space-xl $space-l;
+  }
+
 
   > code {
+    font-size: $font-size--s;
     line-height: $line-height--l;
+    @media screen and (min-width: $screen-lg) {
+      font-size: $font-size;
+    }
   }
 }

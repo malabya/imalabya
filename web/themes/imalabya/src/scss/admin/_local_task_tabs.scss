@@ -7,11 +7,15 @@
   ul {
     @include no-bullet();
 
-    > li a {
-      padding: $space;
-      font-family: $font-primary;
-      font-size: $font-size;
-      font-weight: $font-weight--bold;
+    > li {
+      margin-bottom: 0;
+
+      a {
+        padding: $space;
+        font-family: $font-primary;
+        font-size: $font-size;
+        font-weight: $font-weight--bold;
+      }
     }
   }
 }

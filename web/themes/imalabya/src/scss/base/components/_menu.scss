@@ -10,5 +10,13 @@
     font-family: $font-primary;
     font-size: $font-size--menu;
     font-weight: $font-weight--bold;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }
