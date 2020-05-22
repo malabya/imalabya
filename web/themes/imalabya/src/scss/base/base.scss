@@ -8,6 +8,7 @@ body {
   position: relative;
   display: block;
   margin: auto;
+  text-rendering: optimizeLegibility;
   word-break: break-word;
   color: $color-black;
   font-family: $font-primary;

@@ -6,12 +6,18 @@
 
   margin-top: $space-xxl;
   margin-bottom: $space-l;
+  font-family: $font-primary;
 
   > li {
     position: relative;
     grid-column: 1 / -1;
     padding: $space-s;
     border: $border;
+    line-height: $line-height;
+
+    > a {
+      font-size: $font-size;
+    }
 
     @media screen and (min-width: $screen-sm) {
       grid-column: 7 / span 6;

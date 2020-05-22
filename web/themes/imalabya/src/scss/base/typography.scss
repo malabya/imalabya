@@ -9,7 +9,6 @@ h6 {
   margin-bottom: $space-l;
   letter-spacing: -0.05rem;
   color: $color-primary;
-  font-family: $font-primary;
   font-weight: $font-weight--bold;
   line-height: $line-height;
 }
@@ -51,9 +50,10 @@ h4 {
 }
 
 h5 {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: $space-s;
   text-transform: uppercase;
-  font-size: $font-size--s;
+  font-size: $font-size--xs;
 }
 
 a {
@@ -177,5 +177,5 @@ li > code {
   padding: $space;
   padding-left: $space-l;
   border-left: 0.25rem solid $color-primary;
-  background: $color-info-box-bg;
+  background: $color-bg;
 }
