@@ -32,6 +32,8 @@ class FigureWrapper extends FilterBase {
     foreach ($elements as $element) {
       // Skip if image already have a figure wrapper.
       if ($element->parentNode->tagName === 'figure') {
+        // Add the zoom class early for `medium-zoom` library.
+        $element->setAttribute('class', 'z-image');
         continue;
       }
       $class = $element->getAttribute('class');
@@ -47,12 +49,19 @@ class FigureWrapper extends FilterBase {
       // Set attributes.
       $figure->setAttribute('class', $class);
 
+      // Now add the zoom class for img `medium-zoom` library.
+      $z_class = 'z-image';
+      $image->setAttribute('class', $z_class);
+
       // Append & replace the new element.
       $figure->appendChild($image);
       $element->parentNode->replaceChild($figure, $element);
     }
 
     $result = new FilterProcessResult(Html::serialize($dom));
+    $result->setAttachments([
+      'library' => 'imalabya/zoom',
+    ]);
 
     return $result;
   }

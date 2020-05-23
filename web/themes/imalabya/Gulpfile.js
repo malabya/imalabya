@@ -13,7 +13,7 @@ const { lintScss, lintJs } = require('./gulp-tasks/lint');
 const { watch } = require('./gulp-tasks/watch');
 
 // Export a build Gulp task to create a deployment build.
-exports.build = series(clean, styles, scripts, imagemin);
+exports.build = series(clean, styles, scripts, imagemin, lintScss, lintJs);
 exports.watch = series(parallel(styles, scripts, imagemin), watch);
 exports.clean = clean;
 exports.lint = parallel(lintScss, lintJs);

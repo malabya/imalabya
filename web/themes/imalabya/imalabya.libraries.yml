@@ -69,6 +69,11 @@ prism:
     node_modules/prismjs/components/prism-bash.min.js: {}
     node_modules/prismjs/components/prism-yaml.min.js: {}
 
+zoom:
+  js:
+    node_modules/medium-zoom/dist/medium-zoom.min.js: {}
+    dist/js/zoom.js: {}
+
 # Admin styles
 admin:
   css:
