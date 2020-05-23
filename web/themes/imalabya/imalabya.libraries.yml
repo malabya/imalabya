@@ -8,9 +8,6 @@ global-styling:
       dist/css/base/layout/layout.css: {}
     component:
       dist/css/base/components/components.css: {}
-  js:
-    node_modules/quicklink/dist/quicklink.umd.js: {}
-    dist/js/quicklink.js: {}
 
 # Component styling
 previous_next:
