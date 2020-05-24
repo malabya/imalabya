@@ -33,7 +33,7 @@ class FigureWrapper extends FilterBase {
       // Skip if image already have a figure wrapper.
       if ($element->parentNode->tagName === 'figure') {
         // Add the zoom class early for `medium-zoom` library.
-        $element->setAttribute('class', 'z-image');
+        $element->setAttribute('class', 'zoomable');
         continue;
       }
       $class = $element->getAttribute('class');
