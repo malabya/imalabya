@@ -1,20 +1,66 @@
 @import "../settings/settings";
 
 pre[class*="language-"] {
+  overflow-x: auto;
+  overflow-y: hidden;
   margin-top: -$space;
   margin-bottom: $space-xl;
-  padding: 0 $space $space-l;
+  padding: $space-xl $space $space-l;
 
   @media screen and (min-width: $screen-lg) {
-    padding: 0 $space-xl $space-l;
+    padding: $space-xl $space-xl $space-l;
   }
 
   > code {
+    padding: $space-xl 0 $space-l;
     font-size: $font-size--s;
     line-height: $line-height--l;
 
     @media screen and (min-width: $screen-lg) {
       font-size: $font-size;
+    }
+  }
+
+  &.line-numbers {
+    padding-left: $space-xxl;
+  }
+
+  .line-numbers-rows {
+    left: -$space-xxl;
+    padding: $space-xl $space-ml $space-l;
+  }
+}
+
+.code-toolbar > .toolbar {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 8rem;
+  opacity: 1 !important;
+
+  > .toolbar-item {
+    flex: 0 0 3.5rem;
+    margin-right: $space;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    > span,
+    > button {
+      display: block;
+      width: 100%;
+      padding: $space-xs;
+      text-align: center;
+      color: $color-smoke;
+      border-radius: 0;
+      font-size: $font-size--xs;
+      line-height: $line-height;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        color: $color-smoke;
+      }
     }
   }
 }

@@ -1,15 +1,18 @@
 .breadcrumb {
-  @include no-bullet();
+  > ol {
+    @include no-bullet();
 
-  display: flex;
-  flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
+  }
 
-  > * {
+  * {
+    margin: 0;
     font-family: $font-primary;
     font-size: $font-size--s;
   }
 
-  > li {
+  li {
     &::after {
       margin-right: $space-xs;
       content: "\000BB";

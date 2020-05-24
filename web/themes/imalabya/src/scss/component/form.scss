@@ -39,4 +39,9 @@ button {
   @include button();
 
   grid-column: 1/4;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
 }

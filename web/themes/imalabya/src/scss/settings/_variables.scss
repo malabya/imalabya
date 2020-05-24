@@ -1,5 +1,5 @@
 // Font and text setting.
-$font-primary: "BlinkMacSystemFont", -apple-system, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell",
+$font-primary: system-ui, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell",
   "Helvetica Neue", sans-serif;
 $font-secondary: "Georgia", "Times", "Times New Roman", serif;
 $font-weight: normal;
@@ -9,9 +9,9 @@ $font-size--s: 0.875rem;
 $font-size: 1.0625rem;
 $font-size--m: 1.35rem;
 $font-size--l: 1.75rem;
-$font-size--xl: 2.5rem;
-$font-size--xxl: 3.25rem;
-$font-size--xxxl: 4.25rem;
+$font-size--xl: 2.25rem;
+$font-size--xxl: 3rem;
+$font-size--xxxl: 4rem;
 $font-size--text: 1.2rem;
 $font-size--blockquote: 1.35rem;
 $font-size--menu: 1rem;
@@ -28,6 +28,7 @@ $space: 1rem;
 $space-xs: 0.25rem;
 $space-s: 0.75rem;
 $space-m: 1.125rem;
+$space-ml: 2rem;
 $space-l: 2.5rem;
 $space-xl: 3.5rem;
 $space-xxl: 6rem;

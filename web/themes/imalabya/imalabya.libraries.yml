@@ -54,9 +54,12 @@ prism:
   css:
     theme:
       node_modules/prismjs/themes/prism-tomorrow.css: {}
+      node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css: {}
+      node_modules/prismjs/plugins/toolbar/prism-toolbar.css: {}
       dist/css/theme/preformatted.css: {}
   js:
     node_modules/prismjs/prism.js: {}
+    node_modules/prismjs/plugins/remove-initial-line-feed/prism-remove-initial-line-feed.min.js: {}
     node_modules/prismjs/components/prism-clike.min.js: {}
     node_modules/prismjs/components/prism-markup-templating.min.js: {}
     node_modules/prismjs/components/prism-javadoclike.min.js: {}
@@ -65,6 +68,10 @@ prism:
     node_modules/prismjs/components/prism-php.min.js: {}
     node_modules/prismjs/components/prism-bash.min.js: {}
     node_modules/prismjs/components/prism-yaml.min.js: {}
+    node_modules/prismjs/plugins/line-numbers/prism-line-numbers.min.js: {}
+    node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js: {}
+    node_modules/prismjs/plugins/show-language/prism-show-language.min.js: {}
+    node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js: {}
 
 zoom:
   js:
