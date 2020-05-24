@@ -30,18 +30,18 @@ class CodeStyleFilter extends FilterBase {
 
     foreach ($elements as $element) {
       $content = $element->textContent;
-      $class = $element->getAttribute('class');
+      $class = explode(" ", $element->getAttribute('class'));
 
       // Create the elements.
       $code = $dom->createElement('code', htmlentities($content));
       $pre = $dom->createElement('pre');
 
       // Set attributes.
-      $code->setAttribute('class', $class);
+      $code->setAttribute('class', implode(" ", $class));
 
       // Add the `line-numbers` class for prismjs.
-      $class .= ' line-numbers';
-      $pre->setAttribute('class', $class);
+      array_push($class, 'line-numbers');
+      $pre->setAttribute('class', implode(" ", $class));
 
       // Append & replace the new element.
       $pre->appendChild($code);

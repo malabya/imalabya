@@ -78,6 +78,10 @@ zoom:
     node_modules/medium-zoom/dist/medium-zoom.min.js: {}
     dist/js/zoom.js: {}
 
+lazy:
+  js:
+    dist/js/lazyload.js: {}
+
 # Admin styles
 admin:
   css:

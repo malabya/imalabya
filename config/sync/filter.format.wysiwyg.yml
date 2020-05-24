@@ -22,7 +22,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite><br> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <u> <s> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p class="info-box"> <code class="language-php language-css language-js language-twig language-yml"> <pre class="language-php language-css language-js language-twig language-yml language-shell">'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <br> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <u> <s> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p class="info-box"> <code class="language-php language-css language-js language-twig language-yml"> <pre class="language-php language-css language-js language-twig language-yml language-shell">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_align:
@@ -63,6 +63,12 @@ filters:
     settings: {  }
   im_external_links:
     id: im_external_links
+    provider: im_filters
+    status: true
+    weight: 0
+    settings: {  }
+  im_lazy_load_image:
+    id: im_lazy_load_image
     provider: im_filters
     status: true
     weight: 0

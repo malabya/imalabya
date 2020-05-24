@@ -50,7 +50,7 @@ class FigureWrapper extends FilterBase {
       $figure->setAttribute('class', $class);
 
       // Now add the zoom class for img `medium-zoom` library.
-      $z_class = 'z-image';
+      $z_class = 'zoomable';
       $image->setAttribute('class', $z_class);
 
       // Append & replace the new element.

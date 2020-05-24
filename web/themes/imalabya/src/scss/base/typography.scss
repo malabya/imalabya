@@ -129,12 +129,13 @@ ol {
 }
 
 .align-right {
+  width: 100%;
   height: auto;
   margin: $space-l 0;
 
   @media screen and (min-width: $screen-sm) {
     float: right;
-    max-width: $box;
+    width: $box;
     margin-top: $space-s;
     margin-bottom: $space-s;
     margin-left: $space;

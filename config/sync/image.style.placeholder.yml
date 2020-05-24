@@ -1,0 +1,15 @@
+uuid: f2547357-0232-4c77-83ce-26dc0f4a6ca6
+langcode: en
+status: true
+dependencies: {  }
+name: placeholder
+label: Placeholder
+effects:
+  1b22665a-c3fd-46fc-aebf-b17e6c75496d:
+    uuid: 1b22665a-c3fd-46fc-aebf-b17e6c75496d
+    id: image_scale
+    weight: 1
+    data:
+      width: 5
+      height: null
+      upscale: false
