@@ -3,6 +3,7 @@
 namespace Drupal\im_filters\Plugin\Filter;
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\StreamWrapper\PublicStream;
 use Drupal\file\Entity\File;
 use Drupal\filter\FilterProcessResult;
 use Drupal\filter\Plugin\FilterBase;
@@ -33,15 +34,11 @@ class LazyLoad extends FilterBase {
     foreach ($elements as $element) {
       $src = $element->getAttribute('src');
 
-      // Get the file ID.
-      $fid = $this->getFileId($src);
-
       // Get the placeholder image src.
-      $placeholder = $this->getPlaceholder($fid);
+      $placeholder = $this->getPlaceholder($src);
 
+      // Get any existing classes and add the lazy class for lazy loading image.
       $classes = explode(" ", $element->getAttribute('class'));
-
-      // Add the lazy class for lazy loading image.
       array_push($classes, 'lazy');
 
       // Set the attributes.
@@ -59,22 +56,12 @@ class LazyLoad extends FilterBase {
   }
 
   /**
-   * Get the file ID from file path.
-   */
-  protected function getFileId($src) {
-    $filename = pathinfo($src, PATHINFO_BASENAME);
-    $fid = \Drupal::entityQuery('file')->condition('filename', $filename)->execute();
-
-    return reset($fid);
-  }
-
-  /**
    * Get the placeholder image.
    */
-  protected function getPlaceholder($fid) {
+  protected function getPlaceholder($src) {
+    $filename = pathinfo(urldecode($src), PATHINFO_BASENAME);
     $style = ImageStyle::load('placeholder');
-    $file = File::load($fid);
-    $uri = $style->buildUrl($file->getFileUri());
+    $uri = $style->buildUrl('public://inline-images/' . $filename);
 
     return file_url_transform_relative($uri);
   }
