@@ -1239,16 +1239,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.1.x-dev",
+            "version": "9.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "a31541dc73569224db8f31de5fa644dadd0b57c8"
+                "reference": "b97eebe9799d323f3dc0a5c372b341de57bbc7d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/a31541dc73569224db8f31de5fa644dadd0b57c8",
-                "reference": "a31541dc73569224db8f31de5fa644dadd0b57c8",
+                "url": "https://api.github.com/repos/drupal/core/zipball/b97eebe9799d323f3dc0a5c372b341de57bbc7d4",
+                "reference": "b97eebe9799d323f3dc0a5c372b341de57bbc7d4",
                 "shasum": ""
             },
             "require": {
@@ -1479,24 +1479,24 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-05-14T14:25:41+00:00"
+            "time": "2020-05-22T22:32:46+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.0.0-beta2",
+            "version": "9.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "bc6d4b20be795a3993ecfa72750c5b1c2832775e"
+                "reference": "03a666bff3b31b011eca7edc7df05a15d8e10bcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/bc6d4b20be795a3993ecfa72750c5b1c2832775e",
-                "reference": "bc6d4b20be795a3993ecfa72750c5b1c2832775e",
+                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/03a666bff3b31b011eca7edc7df05a15d8e10bcb",
+                "reference": "03a666bff3b31b011eca7edc7df05a15d8e10bcb",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0.0",
+                "composer-plugin-api": "^1 || ^2",
                 "php": ">=7.3.0"
             },
             "conflict": {
@@ -1526,24 +1526,24 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2020-03-05T21:32:44+00:00"
+            "time": "2020-05-11T17:00:39+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.0.0-beta2",
+            "version": "9.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
-                "reference": "5984bad5e53782a946cccfab14deda84bef7d190"
+                "reference": "571ad1a0824d53e1f780584b883ee61a5c8c0b28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/5984bad5e53782a946cccfab14deda84bef7d190",
-                "reference": "5984bad5e53782a946cccfab14deda84bef7d190",
+                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/571ad1a0824d53e1f780584b883ee61a5c8c0b28",
+                "reference": "571ad1a0824d53e1f780584b883ee61a5c8c0b28",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.1",
+                "composer-plugin-api": "^1.1 || ^2",
                 "php": ">=7.3.0"
             },
             "type": "composer-plugin",
@@ -1564,20 +1564,20 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2020-02-21T09:34:07+00:00"
+            "time": "2020-05-04T10:06:27+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.1.x-dev",
+            "version": "9.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "47e3ca122391525333f46655ff6ba8a3f0e14817"
+                "reference": "9c37adc137e9247090578f7b4ad46acca17acdc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/47e3ca122391525333f46655ff6ba8a3f0e14817",
-                "reference": "47e3ca122391525333f46655ff6ba8a3f0e14817",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/9c37adc137e9247090578f7b4ad46acca17acdc0",
+                "reference": "9c37adc137e9247090578f7b4ad46acca17acdc0",
                 "shasum": ""
             },
             "require": {
@@ -1586,7 +1586,7 @@
                 "doctrine/annotations": "1.10.2",
                 "doctrine/lexer": "1.2.0",
                 "doctrine/reflection": "1.2.1",
-                "drupal/core": "9.1.x-dev",
+                "drupal/core": "9.0.0-rc1",
                 "egulias/email-validator": "2.1.17",
                 "guzzlehttp/guzzle": "6.5.3",
                 "guzzlehttp/promises": "v1.3.1",
@@ -1645,7 +1645,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2020-05-11T16:57:07+00:00"
+            "time": "2020-05-22T22:32:46+00:00"
         },
         {
             "name": "drush/drush",
