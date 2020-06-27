@@ -3,7 +3,6 @@ recipe: drupal8
 config:
   webroot: web
   php: "7.4"
-  drush: "*"
   xdebug: false
 services:
   database:
