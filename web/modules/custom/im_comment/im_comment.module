@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * IMalabya Disqus comment.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function im_comment_theme() {
+  return [
+    'im_comment' => [
+      'render element' => 'elements',
+      'variables' => [
+        'disqus_shortname' => NULL,
+      ],
+    ],
+  ];
+}

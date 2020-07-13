@@ -11,3 +11,17 @@
     letter-spacing: -0.5rem;
   }
 }
+
+.comments {
+  @include grid();
+
+  margin-bottom: $space-xxl;
+
+  .disqus_comments {
+    @include grid-content();
+  }
+}
+
+#disqus_trigger {
+  @include  button();
+}

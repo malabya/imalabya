@@ -1,0 +1,7 @@
+example.settings:
+  path: '/admin/config/imalabya/disqus_comments'
+  defaults:
+    _form: '\Drupal\im_comment\Form\DisqusConfigForm'
+    _title: 'Disqus settings'
+  requirements:
+    _permission: 'administer site configuration'

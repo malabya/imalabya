@@ -1,0 +1,28 @@
+uuid: 0ac1867b-416d-4952-bc0d-ee54cf2f0e6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - im_comment
+    - node
+  theme:
+    - imalabya
+id: disquscomment
+theme: imalabya
+region: content
+weight: 0
+provider: null
+plugin: disqus_comment
+settings:
+  id: disqus_comment
+  label: 'Disqus comment'
+  provider: im_comment
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

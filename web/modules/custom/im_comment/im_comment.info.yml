@@ -1,0 +1,5 @@
+name: Comments - Lazy loaded Disqus comments
+description: Provides a block which loads Disqus comment on click.
+type: module
+package: Custom
+core_version_requirement: ^8|^9

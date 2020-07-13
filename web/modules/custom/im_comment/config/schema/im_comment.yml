@@ -1,0 +1,9 @@
+# Schema for the configuration files of the iMalabya comment module.
+
+im_comment.disqus:
+  type: config_object
+  label: 'iMalabya Disqus comment settings'
+  shortname:
+    type: string
+    label: Shortname
+
