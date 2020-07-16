@@ -81,3 +81,28 @@
     background: $color-link--hover-bg;
   }
 }
+
+@mixin add-button {
+  -webkit-appearance: none;
+  display: inline-block;
+  margin: $space 0;
+  padding: $space $space-xs;
+  cursor: pointer;
+  text-decoration: none;
+  color: $color-primary;
+  border: none;
+  background: none;
+  font-size: $font-size;
+  font-weight: $font-weight--bold;
+
+  > svg {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  &::after {
+    margin-left: $space-xs;
+    content: "\0002B";
+    font-weight: $font-weight;
+  }
+}

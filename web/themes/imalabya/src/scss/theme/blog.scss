@@ -12,16 +12,11 @@
   }
 }
 
-.comments {
-  @include grid();
-
-  margin-bottom: $space-xxl;
-
-  .disqus_comments {
-    @include grid-content();
-  }
+#comments {
+  min-height: 4.75rem;
+  margin-top: $space-xl;
 }
 
 #disqus_trigger {
-  @include button();
+  @include add-button();
 }

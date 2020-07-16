@@ -61,6 +61,11 @@
 
     ul {
       @include no-bullet();
+
+      li {
+        margin-bottom: $space;
+        font-size: $font-size;
+      }
     }
   }
 }

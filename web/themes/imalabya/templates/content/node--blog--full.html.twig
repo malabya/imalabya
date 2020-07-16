@@ -18,6 +18,9 @@
 {% endblock %}
 {% block content %}
 	{{ content.body }}
+	<section id="comments">
+		{{ disqus }}
+	</section>
 	<footer aria-label="Blog pager - Previous and Next blogs">
 		{% include "@im_prevnext/im-previous-next.html.twig" %}
 	</footer>

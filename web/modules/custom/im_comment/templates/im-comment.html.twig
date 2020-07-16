@@ -1,6 +1,2 @@
-<div class="comments">
-	<div class="disqus_comments">
-		<button id="disqus_trigger" onclick="load_disqus('{{ disqus_shortname }}')">{{ 'Join the conversation'|t }}</button>
-		<div id="disqus_thread"></div>
-	</div>
-</div>
+<button id="disqus_trigger" onclick="load_disqus('{{ disqus_shortname }}')"> {% include "@imalabya/svg/conversation.html.twig" %} {{ 'Join the conversation'|t }}</button>
+<div id="disqus_thread"></div>

@@ -10,6 +10,5 @@ function load_disqus( disqus_shortname ) {
     disqus_embed.async = true;
     disqus_embed.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     disqus_hook.appendChild(disqus_embed);
-    disqus_trigger.remove();
   }
 }

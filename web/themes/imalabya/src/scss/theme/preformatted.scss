@@ -6,6 +6,8 @@ pre[class*="language-"] {
   margin-top: -$space;
   margin-bottom: $space-xl;
   padding: $space-xl $space $space-l;
+  border-radius: 1.25rem;
+  background: $color-code-bg;
 
   @media screen and (min-width: $screen-lg) {
     padding: $space-xl $space-xl $space-l;
@@ -51,9 +53,13 @@ pre[class*="language-"] {
       width: 100%;
       padding: $space-xs;
       text-align: center;
-      color: $color-smoke;
+      color: $color-code-label;
+      border: none;
       border-radius: 0;
+      background: none;
+      box-shadow: none;
       font-size: $font-size--xs;
+      font-weight: $font-weight--bold;
       line-height: $line-height;
 
       &:hover,

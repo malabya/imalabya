@@ -108,7 +108,7 @@ em {
 
 ul,
 ol {
-  margin: $space-text 0;
+  margin: 0 0 $space-text 0;
   padding-left: $space-m;
   font-family: $font-secondary;
   font-size: $font-size--text;
@@ -171,9 +171,11 @@ figure {
 
 p > code,
 li > code {
-  padding: 0 $space-xs;
-  color: $color-dark-grey;
-  background: $color-smoke;
+  padding: 0.1rem 0.3rem 0.2rem;
+  word-wrap: break-word;
+  border-radius: 0.2rem;
+  background: $color-code;
+  font-size: $font-size--m;
 }
 
 .info-box {
