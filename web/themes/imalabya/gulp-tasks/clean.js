@@ -9,6 +9,6 @@ const { src } = require('gulp');
 // Clean dist file.
 module.exports = {
   clean: function() {
-    return src('dist', { read: false }).pipe(del());
+    return src('dist', { read: false, allowEmpty: true }).pipe(del());
   },
 };
