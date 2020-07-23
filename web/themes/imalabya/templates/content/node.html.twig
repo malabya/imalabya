@@ -80,10 +80,11 @@
 			{{ title_suffix }}
 		{% endblock %}
 	</header>
-	<div{{content_attributes.addClass('node__content')}}>
+	<div id="content">
 		<a id="main-content" tabindex="-1"></a>
 		{% block content %}
 			{{ content }}
 		{% endblock %}
 	</div>
+	{% block footer %}{% endblock %}
 </article>
