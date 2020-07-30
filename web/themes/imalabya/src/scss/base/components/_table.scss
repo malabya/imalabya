@@ -1,0 +1,26 @@
+table {
+  min-width: 100%;
+  margin-top: $space-text;
+  margin-bottom: $space-text;
+  padding: $space-xs;
+  border: $border;
+
+  th,
+  td {
+    padding: $space $space-s;
+    text-align: left;
+  }
+
+  th {
+    color: $color-white;
+    background-color: $color-secondary;
+  }
+
+  tbody > tr > td {
+    font-family: $font-secondary;
+  }
+
+  tbody > tr:nth-child(odd) > td {
+    background: $color-bg;
+  }
+}

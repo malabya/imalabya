@@ -1,5 +1,7 @@
 @import "../settings/settings";
 @import "../base/typography";
+@import "../base/components/info";
+@import "../base/components/table";
 
 p,
 ul,
@@ -10,28 +12,23 @@ h3,
 h4,
 h5,
 h6,
-figure {
-  max-width: $ckeditor-container;
+figure,
+table {
+  width: $ckeditor-container;
+  min-width: $ckeditor-container;
   margin-right: auto;
   margin-left: auto;
 }
 
-.align-right {
+.align-right,
+.align-center {
   > img {
     max-width: 100%;
   }
 }
 
-pre[class*="language-"] {
-  width: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  padding: initial;
-  line-height: inherit;
-}
-
 .cke_editable pre {
+  box-sizing: border-box;
   width: $ckeditor-container !important;
   margin-top: $space-text;
   margin-right: auto;
@@ -39,6 +36,7 @@ pre[class*="language-"] {
   margin-left: auto !important;
   padding: $space-xl;
   color: $color-smoke;
-  background: $color-dark-grey;
+  border-radius: 1.25rem;
+  background: $color-code-bg;
   line-height: $line-height--l;
 }
