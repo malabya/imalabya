@@ -16,10 +16,6 @@ table {
     background-color: $color-secondary;
   }
 
-  tbody > tr > td {
-    font-family: $font-secondary;
-  }
-
   tbody > tr:nth-child(odd) > td {
     background: $color-bg;
   }

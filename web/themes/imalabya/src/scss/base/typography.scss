@@ -73,7 +73,6 @@ a {
 
 p {
   margin: 0 auto $space-text auto;
-  font-family: $font-secondary;
   font-size: $font-size--text;
   line-height: $line-height--l;
 }
@@ -110,7 +109,6 @@ ul,
 ol {
   margin: 0 0 $space-text 0;
   padding-left: $space-m;
-  font-family: $font-secondary;
   font-size: $font-size--text;
 
   > li {
@@ -163,7 +161,6 @@ figure {
 
   figcaption {
     padding: $space-s;
-    font-family: $font-secondary;
     font-size: $font-size--s;
     font-style: italic;
   }

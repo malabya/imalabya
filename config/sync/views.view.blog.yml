@@ -228,6 +228,8 @@ display:
         use_more_always: false
         use_more_text: false
         header: false
+        link_display: false
+        link_url: false
       use_more: true
       use_more_always: false
       use_more_text: 'More blog posts'
@@ -243,6 +245,8 @@ display:
           tokenize: false
           content: '<h2 aria-label="Latest blog posts">Latest blog posts</h2>'
           plugin_id: text_custom
+      link_display: page_1
+      link_url: ''
     cache_metadata:
       max-age: -1
       contexts:
