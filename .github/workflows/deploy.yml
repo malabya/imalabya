@@ -3,8 +3,7 @@ on:
   workflow_run:
     workflows: ["Build & lint project"]
     types:
-      - completed
-      - passed
+      - success
 jobs:
   deploy:
     runs-on: ubuntu-latest
