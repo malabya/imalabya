@@ -1,5 +1,5 @@
 name: imalabya
-recipe: drupal8
+recipe: drupal9
 config:
   webroot: web
   php: "7.4"
