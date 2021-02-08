@@ -6,17 +6,17 @@ on:
       - completed
 jobs:
   if: ${{ github.event.workflow_run.conclusion == 'success' }}
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Deploy to droplet using SSH
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.PRIVATE_KEY }}
-        debug: true
-        script: |
-          cd ${{ secrets.DOCROOT }}
-          git pull
-          robo job:drupal-update
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Deploy to droplet using SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          debug: true
+          script: |
+            cd ${{ secrets.DOCROOT }}
+            git pull
+            robo job:drupal-update
