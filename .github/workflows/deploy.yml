@@ -3,8 +3,9 @@ on:
   workflow_run:
     workflows: ["Build & lint project"]
     types:
-      - success
+      - completed
 jobs:
+  if: ${{ github.event.workflow_run.conclusion == 'success' }}
   deploy:
     runs-on: ubuntu-latest
     steps:
