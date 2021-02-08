@@ -48,7 +48,10 @@ function imalabya_preprocess_html(&$variables) {
         ],
         '#value' => imalabya_get_structured_data_json($node),
       ];
-      $variables['page']['#attached']['html_head'][] = [$structured_data_json, 'structured_data_json'];
+      $variables['page']['#attached']['html_head'][] = [
+        $structured_data_json,
+        'structured_data_json',
+      ];
     }
   }
 }
