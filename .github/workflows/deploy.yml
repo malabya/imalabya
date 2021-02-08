@@ -1,5 +1,10 @@
 name: Deploy to Digital Ocean droplet
-on: [push]
+on:
+  workflow_run:
+    workflows: ["Build & lint project"]
+    branches: [master]
+    types:
+      - completed
 jobs:
   deploy:
     runs-on: ubuntu-latest
