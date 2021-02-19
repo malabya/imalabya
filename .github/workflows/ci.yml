@@ -13,29 +13,6 @@ jobs:
           tools: composer:v2
       - name: Validate composer.json and composer.lock
         run: composer validate
-      - name: Cache Composer vendor packages
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-composer-vendor
-        with:
-          path: ~/vendor
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./vendor') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./web/themes/imalabya/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
       - name: Install composer dependencies
         run: composer install --prefer-dist --no-progress -vvv
       - uses: actions/setup-node@v1
