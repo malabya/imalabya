@@ -5,6 +5,7 @@ namespace Drupal\im_filters\Plugin\Filter;
 use Drupal\Component\Utility\Html;
 use Drupal\filter\FilterProcessResult;
 use Drupal\filter\Plugin\FilterBase;
+use Drupal\image\Entity\ImageStyle;
 
 /**
  * Add code tag structure for syntax highlighting.
@@ -40,6 +41,16 @@ class FigureWrapper extends FilterBase {
       $src = $element->getAttribute('src');
       $alt = $element->getAttribute('alt');
 
+      // Convert image to WebP and create the element.
+      $filename = pathinfo(urldecode($src), PATHINFO_BASENAME);
+      $style = ImageStyle::load('webp');
+      $uri = $style->buildUrl('public://inline-images/' . $filename);
+      $srcset = file_url_transform_relative($uri);
+      $webp = $dom->createElement('img');
+      $webp->setAttribute('src', $srcset);
+      $webp->setAttribute('srcset', $srcset);
+      $webp->setAttribute('type', 'image/webp');
+
       // Create the elements.
       $image = $dom->createElement('img');
       $image->setAttribute('src', $src);
@@ -52,9 +63,11 @@ class FigureWrapper extends FilterBase {
       // Now add the zoom class for img `medium-zoom` library.
       $z_class = 'zoomable';
       $image->setAttribute('class', $z_class);
+      $webp->setAttribute('class', $z_class);
 
       // Append & replace the new element.
-      $figure->appendChild($image);
+      $figure->appendChild($webp);
+      // $figure->appendChild($image);
       $element->parentNode->replaceChild($figure, $element);
     }
 

@@ -33,6 +33,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:

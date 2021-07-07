@@ -20,22 +20,22 @@ class RoboFile extends \Robo\Tasks
     {
         $collection = $this->collectionBuilder();
         $collection->addTask($this->taskComposerInstall());
-        $collection->addTask($this->runDbUpdates());
-        $collection->addTask($this->runConfigImport());
+        $collection->addTask($this->deploy());
         $collection->addTask($this->runBuildFrontEnd());
         $collection->addTask($this->runClearRebuild());
         return $collection->run();
     }
 
     /**
-     * Run database updates.
+     * Run the Drush deploy command.
      *
      * @return \Robo\Task\Base\Exec
-     *   A task to run db updates.
+     *   A task to deployment command.
      */
-    protected function runDbUpdates() {
+    protected function deploy() {
       return $this->drush()
-      ->arg('updatedb')
+      ->arg('deploy')
+      ->option('ansi')
       ->option('yes');
     }
 
@@ -60,18 +60,6 @@ class RoboFile extends \Robo\Tasks
     protected function runClearRebuild() {
       return $this->drush()
       ->arg('cache-rebuild');
-    }
-
-    /**
-     * Install pending configurations.
-     *
-     * @return \Robo\Task\Base\Exec
-     *   A task to import pending configs.
-     */
-    protected function runConfigImport() {
-      return $this->drush()
-      ->arg('config-import')
-      ->option('yes');
     }
 
     /**
