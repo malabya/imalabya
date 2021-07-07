@@ -17,8 +17,8 @@
     "require": {
         "composer/installers": "^1.2",
         "consolidation/robo": "^1.0",
-        "drupal/core-composer-scaffold": "^9.2.0",
-        "drupal/core-recommended": "^9.2.0",
+        "drupal/core-composer-scaffold": "^9.2",
+        "drupal/core-recommended": "^9.2",
         "drush/drush": "^10.2"
     },
     "require-dev": {},
