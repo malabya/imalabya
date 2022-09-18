@@ -7,7 +7,7 @@ tasks:
       lando start
       lando composer install
       chmod ug+w -R /workspace/gitpod/sites/default/
-      lando drush si -y --account-pass=admin --site-name='iMalabya' --db-url=mysql://drupal:drupal@database/drupal --exiting-config
+      lando drush si -y --account-pass=admin --site-name='iMalabya' --db-url=mysql://drupal:drupal@database/drupal --existing-config
       gp preview $(gp url $(lando info --format=json | jq -r ".[0].urls[1]" | sed -e 's#http://localhost:\(\)#\1#'))
   
 ports:
